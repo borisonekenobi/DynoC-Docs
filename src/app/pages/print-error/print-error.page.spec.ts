@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PrintErrorPage } from './print-error.page';
+import {PrintErrorPage} from './print-error.page';
 
 describe('PrintErrorPage', () => {
   let component: PrintErrorPage;
@@ -8,9 +8,8 @@ describe('PrintErrorPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrintErrorPage]
-    })
-    .compileComponents();
+      imports: [PrintErrorPage],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PrintErrorPage);
     component = fixture.componentInstance;

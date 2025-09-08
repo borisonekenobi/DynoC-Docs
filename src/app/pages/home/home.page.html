@@ -1,17 +1,35 @@
-<div class="home-container">
+<div class="home">
   <h1>DynoC Programming Language</h1>
-  <p>
-    DynoC is a dynamically-typed programming language with C++/Java-like syntax.
+  <p class="tagline">
+    A modern, lightweight programming language with C-like syntax
+    and dynamic typing.
   </p>
 
-  <div class="quick-links">
-    <a routerLink="/getting-started" class="btn">Get Started</a>
-    <a routerLink="/documentation" class="btn">Documentation</a>
-    <a href="https://github.com/borisonekenobi/DynoC-Docs" target="_blank" class="btn">GitHub</a>
+  <div class="actions">
+    <a routerLink="/getting-started" class="btn primary">Get Started</a>
+    <a href="https://github.com/borisonekenobi/DynoC-Docs" target="_blank" class="btn">View on GitHub</a>
   </div>
 
+  <h2>Why DynoC?</h2>
+  <ul>
+    <li><strong>C-style syntax</strong> with dynamic typing for fast prototyping.</li>
+    <li><strong>Simple runtime</strong> that compiles to efficient assembly code.</li>
+    <li><strong>Cross-platform support</strong> planned (Linux, Windows, 32/64-bit).</li>
+    <li><strong>Growing standard library</strong> with familiar functions like <code>print()</code> and
+      <code>input()</code>.
+    </li>
+  </ul>
+
   <h2>Example</h2>
-  <pre><code>
-print_line("Hello, world!");
-  </code></pre>
+  <pre><code>for (int i = 0; i &lt; 5; i++) &#123;
+    print_line("Count: ", i);
+&#125;</code></pre>
+
+  <div class="note.info">
+    <p>
+      DynoC is in early development. Features are being added quickly,
+      check the <a href="https://github.com/borisonekenobi/DynoC-Docs/issues" target="_blank">issues page</a>
+      to follow progress.
+    </p>
+  </div>
 </div>

@@ -1,19 +1,19 @@
 import {Routes} from '@angular/router';
 import {HomePage} from './pages/home/home.page';
+import {GettingStartedPage} from './pages/getting-started/getting-started.page';
+import {DocumentationPage} from './pages/documentation/documentation.page';
 import {LanguageGuidePage} from './pages/language-guide/language-guide.page';
 import {SyntaxPage} from './pages/syntax/syntax.page';
 import {TypesPage} from './pages/types/types.page';
 import {FunctionsPage} from './pages/functions/functions.page';
 import {ControlFlowPage} from './pages/control-flow/control-flow.page';
 import {StdlibPage} from './pages/stdlib/stdlib.page';
-import {DocumentationPage} from './pages/documentation/documentation.page';
 import {PrintPage} from './pages/print/print.page';
 import {PrintLinePage} from './pages/print-line/print-line.page';
 import {PrintErrorPage} from './pages/print-error/print-error.page';
 import {InputPage} from './pages/input/input.page';
 import {ExamplesPage} from './pages/examples/examples.page';
 import {ContributingPage} from './pages/contributing/contributing.page';
-import {GettingStartedPage} from './pages/getting-started/getting-started.page';
 
 export const routes: Routes = [
   {path: '', component: HomePage},

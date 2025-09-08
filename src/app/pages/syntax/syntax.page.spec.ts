@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SyntaxPage } from './syntax.page';
+import {SyntaxPage} from './syntax.page';
 
 describe('SyntaxPage', () => {
   let component: SyntaxPage;
@@ -8,9 +8,8 @@ describe('SyntaxPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SyntaxPage]
-    })
-    .compileComponents();
+      imports: [SyntaxPage],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SyntaxPage);
     component = fixture.componentInstance;

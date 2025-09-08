@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-stdlib',
   imports: [
-    RouterLink,
-    RouterOutlet,
-  ],
+    RouterOutlet],
   templateUrl: './stdlib.page.html',
-  styleUrl: './stdlib.page.css'
+  styleUrl: './stdlib.page.css',
 })
 export class StdlibPage {
 

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ContributingPage } from './contributing.page';
+import {ContributingPage} from './contributing.page';
 
 describe('ContributingPage', () => {
   let component: ContributingPage;
@@ -8,9 +8,8 @@ describe('ContributingPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContributingPage]
-    })
-    .compileComponents();
+      imports: [ContributingPage],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ContributingPage);
     component = fixture.componentInstance;
