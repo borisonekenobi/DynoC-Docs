@@ -1,0 +1,18 @@
+<h2>print_error()</h2>
+
+<div class="note-box note-error">
+  <strong>Error:</strong> The <code>print_error()</code> function cannot print numbers.
+  Integers and floats are currently sent to <code>stdout</code> instead of <code>stderr</code>.
+  You can track progress on this issue or report bugs on
+  <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/3" target="_blank">the GitHub Issues page</a>.
+</div>
+
+<p>Writes one or more values to standard error output. This is useful for displaying errors separately from normal program output.</p>
+
+<h3>Syntax</h3>
+<pre><code>print_error(value1, value2, ...);
+</code></pre>
+
+<h3>Examples</h3>
+<pre><code>print_error("Error: invalid input");
+</code></pre>

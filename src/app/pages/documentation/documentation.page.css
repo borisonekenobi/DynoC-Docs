@@ -1,0 +1,9 @@
+.guide-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.guide-content {
+  flex: 1;
+  padding: 1rem;
+}

@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+.note-box {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+.note-box a {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.note-box a:hover {
+  text-decoration: none;
+}
+
+.note-info {
+  background: #e7f3fe;
+  border-color: #b3d8ff;
+  color: #084298;
+}
+
+.note-warning {
+  background: #fff3cd;
+  border-color: #ffeeba;
+  color: #856404;
+}
+
+.note-error {
+  background: #f8d7da;
+  border-color: #f5c2c7;
+  color: #842029;
+}
