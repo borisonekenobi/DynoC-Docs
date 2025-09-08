@@ -1,0 +1,22 @@
+.sidebar {
+  width: 200px;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0.4rem 0;
+  color: #007acc;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}

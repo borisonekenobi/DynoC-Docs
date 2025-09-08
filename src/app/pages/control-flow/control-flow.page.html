@@ -1,0 +1,35 @@
+<h2>Control Flow</h2>
+<p>DynoC supports standard control flow constructs, similar to C-like languages.</p>
+
+<h3>If / Else</h3>
+<pre><code>var x = 10;
+
+if (x > 5) &#123;
+  print("Greater than 5");
+&#125; else &#123;
+  print("5 or less");
+&#125;
+</code></pre>
+
+<h3>While Loop</h3>
+<pre><code>var i = 0;
+while (i < 5) &#123;
+  print(i);
+  i++;
+&#125;
+</code></pre>
+
+<h3>For Loop</h3>
+<pre><code>for (var i = 0; i < 3; i++) &#123;
+  print(i);
+&#125;
+</code></pre>
+
+<h3>Break / Continue</h3>
+<pre><code>for (var i = 0; i < 5; i++) &#123;
+  if (i == 2) continue;
+  if (i == 4) break;
+  print(i);
+&#125;
+// prints: 0, 1, 3
+</code></pre>
