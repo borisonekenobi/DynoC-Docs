@@ -1,0 +1,20 @@
+<h2>input()</h2>
+
+<div class="note-box note-warning">
+  <strong>Warning:</strong> The <code>input()</code> function does not handle multi-line paste correctly.
+  If multiple lines are pasted into the terminal, they are treated as a single input instead of being split.
+  Please see <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/12" target="_blank">
+  the GitHub Issues page</a> for more details.
+</div>
+
+<p>Reads a line of text from standard input and returns it as a string. Input is terminated when the user presses Enter.</p>
+
+<h3>Syntax</h3>
+<pre><code>var text = input();
+</code></pre>
+
+<h3>Examples</h3>
+<pre><code>print("Enter your name: ");
+var name = input();
+print_line("Hello, " + name + "!");
+</code></pre>
