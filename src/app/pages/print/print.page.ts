@@ -1,13 +1,10 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-print',
-  imports: [
-    RouterLink,
-  ],
+  imports: [],
   templateUrl: './print.page.html',
-  styleUrl: './print.page.css'
+  styleUrl: './print.page.css',
 })
 export class PrintPage {
 

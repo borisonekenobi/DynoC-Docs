@@ -1,13 +1,10 @@
-import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-input',
-  imports: [
-    RouterLink,
-  ],
+  imports: [],
   templateUrl: './input.page.html',
-  styleUrl: './input.page.css'
+  styleUrl: './input.page.css',
 })
 export class InputPage {
 

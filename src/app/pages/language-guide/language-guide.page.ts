@@ -1,17 +1,12 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
-import {SidebarComponent} from '../../components/sidebar/sidebar.component';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-language-guide',
   imports: [
-    RouterLink,
-    RouterLinkActive,
-    RouterOutlet,
-    SidebarComponent,
-  ],
+    RouterOutlet],
   templateUrl: './language-guide.page.html',
-  styleUrl: './language-guide.page.css'
+  styleUrl: './language-guide.page.css',
 })
 export class LanguageGuidePage {
 
