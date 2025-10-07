@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Version} from '../version';
 import {SidebarComponent} from '../../components/sidebar/sidebar.component';
 import {RouterOutlet} from '@angular/router';
 import {
@@ -22,8 +23,8 @@ import {InputPage} from './input/input.page';
   templateUrl: '../version.page.html',
   styleUrl: '../version.page.css',
 })
-export class V0_3_0Page {
-  static sidebarLayout: SidebarElement[] = [
+export class V0_3_0Page extends Version {
+  static override sidebarLayout: SidebarElement[] = [
     {path: '', redirectTo: 'language-guide', pathMatch: 'full'}, {
       name: 'Language Guide',
       path: 'language-guide',
@@ -69,7 +70,7 @@ export class V0_3_0Page {
           name: 'input()', path: 'input', component: InputPage, children: [],
         } as SidebarLink],
     } as SidebarLink];
-  available: boolean = true;
-  version: string = '0.3.0';
-  sidebarLayout: SidebarElement[] = V0_3_0Page.sidebarLayout;
+  override available: boolean = true;
+  override version: string = '0.3.0';
+  override sidebarLayout: SidebarElement[] = V0_3_0Page.sidebarLayout;
 }
