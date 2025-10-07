@@ -1,6 +1,6 @@
 import {SidebarElement} from '../../sidebar-element';
 
-export class Version {
+export abstract class Version {
   static sidebarLayout: SidebarElement[];
   available!: boolean;
   version!: string;
