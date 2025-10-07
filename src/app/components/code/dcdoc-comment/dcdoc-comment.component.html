@@ -1,0 +1,16 @@
+<span class="text">/**
+  <br>
+  @if ('description' in this.info) {
+    * {{ this.info.description }}
+  }
+  <br>
+  @for (param of this.info.params; track param) {
+    * <span class="tag">&#64;param </span><span
+      class="no-color">{{ param.name }}</span> - {{ param.description }}
+  }
+  <br>
+  @if ('returns' in this.info) {
+    * <span class="tag">&#64;return </span>{{ this.info.returns }}
+  }
+  <br>
+ */</span>
