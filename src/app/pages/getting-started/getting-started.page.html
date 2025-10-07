@@ -8,8 +8,8 @@
 
   <h2>1. Download the Compiler</h2>
   <div class="note-box note-info">
-    <strong>Info:</strong> For now, DynoC compiles programs for Linux x86-64.
-    Windows and other targets will be supported in the future.
+    <strong>Info:</strong> For now, DynoC compiles programs for Linux and Windows x86-64.
+    Other targets will be supported in the future.
     You can track progress on this issue or report bugs on
     <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/10" target="_blank">the GitHub Issues page</a>.
   </div>
@@ -24,14 +24,19 @@
 
   <pre><code>print_line("Hello, DynoC!");</code></pre>
 
-  <h2>3. Run the Program</h2>
+  <h2>3. Compile</h2>
   <p>
     Open a terminal in the folder containing <code>hello.dc</code> and run:
   </p>
   <pre><code>dynoc hello.dc</code></pre>
-
   <p>
-    You should see the output:
+    An executable file should be created, with the following output:
+  </p>
+  <pre><code>Successfully compiled to ...</code></pre>
+
+  <h2>4. Run the Program</h2>
+  <p>
+    Run the executable file, and you should see the output:
   </p>
   <pre><code>Hello, DynoC!</code></pre>
 </div>
