@@ -2,38 +2,26 @@ import {Routes} from '@angular/router';
 import {HomePage} from './pages/home/home.page';
 import {GettingStartedPage} from './pages/getting-started/getting-started.page';
 import {DocumentationPage} from './pages/documentation/documentation.page';
-import {LanguageGuidePage} from './pages/language-guide/language-guide.page';
-import {SyntaxPage} from './pages/syntax/syntax.page';
-import {TypesPage} from './pages/types/types.page';
-import {FunctionsPage} from './pages/functions/functions.page';
-import {ControlFlowPage} from './pages/control-flow/control-flow.page';
-import {StdlibPage} from './pages/stdlib/stdlib.page';
-import {PrintPage} from './pages/print/print.page';
-import {PrintLinePage} from './pages/print-line/print-line.page';
-import {PrintErrorPage} from './pages/print-error/print-error.page';
-import {InputPage} from './pages/input/input.page';
 import {ExamplesPage} from './pages/examples/examples.page';
 import {ContributingPage} from './pages/contributing/contributing.page';
+import {V0_3_0Page} from './pages/v0.3.0/v0_3_0-page';
+import {V0_3_1Page} from './pages/v0.3.1/v0_3_1-page';
 
 export const routes: Routes = [
   {path: '', component: HomePage},
   {path: 'getting-started', component: GettingStartedPage},
   {
     path: 'documentation', component: DocumentationPage, children: [
-      {path: '', redirectTo: 'language-guide', pathMatch: 'full'}, {
-        path: 'language-guide', component: LanguageGuidePage, children: [
-          {path: '', redirectTo: 'syntax', pathMatch: 'full'},
-          {path: 'syntax', component: SyntaxPage},
-          {path: 'types', component: TypesPage},
-          {path: 'functions', component: FunctionsPage},
-          {path: 'control-flow', component: ControlFlowPage}],
-      }, {
-        path: 'standard-library', component: StdlibPage, children: [
-          {path: '', redirectTo: 'print', pathMatch: 'full'},
-          {path: 'print', component: PrintPage},
-          {path: 'print_line', component: PrintLinePage},
-          {path: 'print_error', component: PrintErrorPage},
-          {path: 'input', component: InputPage}],
+      {path: '', redirectTo: '0.3.0', pathMatch: 'full'},
+      {
+        path: '0.3.1',
+        component: V0_3_1Page,
+        children: V0_3_1Page.sidebarLayout,
+      },
+      {
+        path: '0.3.0',
+        component: V0_3_0Page,
+        children: V0_3_0Page.sidebarLayout,
       }],
   },
   {path: 'examples', component: ExamplesPage},
