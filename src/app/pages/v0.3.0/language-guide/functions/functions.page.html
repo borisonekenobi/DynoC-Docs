@@ -2,24 +2,24 @@
 <p>Functions in DynoC are defined using a syntax similar to C++ and Java, but with dynamic typing by default.</p>
 
 <h3>Basic Function</h3>
-<pre><code>void greet(string name) &#123;
+<pre>void greet(string name) &#123;
   print("Hello, " + name);
 &#125;
 
 greet("Boris");
-</code></pre>
+</pre>
 
 <h3>Returning Values</h3>
-<pre><code>int square(int x) &#123;
+<pre>int square(int x) &#123;
   return x * x;
 &#125;
 
 var result = square(5); // 25
-</code></pre>
+</pre>
 
 <!--<h3>Closures</h3>-->
-<!--<p>Functions can capture variables from their scope, allowing simple closures:</p>-->
-<!--<pre><code>func counter() &#123;-->
+<!--<p>Functions can capture variables-and-scope from their scope, allowing simple closures:</p>-->
+<!--<pre>func counter() &#123;-->
 <!--  var count = 0;-->
 <!--  return func() &#123;-->
 <!--        count++;-->
@@ -30,4 +30,4 @@ var result = square(5); // 25
 <!--var c = counter();-->
 <!--print(c()); // 1-->
 <!--print(c()); // 2-->
-<!--</code></pre>-->
+<!--</pre>-->
