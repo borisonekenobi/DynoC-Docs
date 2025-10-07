@@ -1,16 +1,21 @@
-<aside class="sidebar">
-  <h3>Language Guide</h3>
-  <nav>
-    <a routerLink="/documentation/language-guide/syntax" routerLinkActive="active">Syntax</a>
-    <a routerLink="/documentation/language-guide/types" routerLinkActive="active">Types</a>
-    <a routerLink="/documentation/language-guide/functions" routerLinkActive="active">Functions</a>
-    <a routerLink="/documentation/language-guide/control-flow" routerLinkActive="active">Control Flow</a>
-  </nav>
-  <h3>Standard Library</h3>
-  <nav>
-    <a routerLink="/documentation/standard-library/print" routerLinkActive="active">print()</a>
-    <a routerLink="/documentation/standard-library/print_line" routerLinkActive="active">print_line()</a>
-    <a routerLink="/documentation/standard-library/print_error" routerLinkActive="active">print_error()</a>
-    <a routerLink="/documentation/standard-library/input" routerLinkActive="active">input()</a>
-  </nav>
+<aside id="sidebar" class="sidebar">
+  <select name="version" id="version" (change)="versionChange()">
+    @for (version of this.versions; track version) {
+      <option [value]="version" [defaultSelected]="version === this.version">DynoC v{{ version }}</option>
+    }
+  </select>
+
+  @for (element of this.layout; track element) {
+    @if ('name' in element) {
+      <h3>{{ element.name }}</h3>
+      <nav>
+        @for (child of element.children; track child) {
+          @if ('name' in child) {
+            <a [routerLink]="`/documentation/${this.version}/${element.path}/${child.path}`"
+               routerLinkActive="active">{{ child.name }}</a>
+          }
+        }
+      </nav>
+    }
+  }
 </aside>
