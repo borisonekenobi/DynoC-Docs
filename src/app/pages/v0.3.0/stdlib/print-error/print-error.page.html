@@ -1,19 +1,77 @@
 <h2>print_error()</h2>
-
-<div class="note-box note-error">
-  <strong>Error:</strong> The <code>print_error()</code> function cannot print numbers.
-  Integers and floats are currently sent to <code>stdout</code> instead of <code>stderr</code>.
-  You can track progress on this issue or report bugs on
-  <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/3" target="_blank">the GitHub Issues page</a>.
-</div>
-
-<p>Writes one or more values to standard error output. This is useful for displaying errors separately from normal
-  program output.</p>
+<p>The <code>print_error()</code> function outputs text or values to the standard error stream (stderr).</p>
+<p>It works like <a href="/documentation/0.3.0/standard-library/print"><code>print()</code></a>, but is intended for
+  error messages, warnings, or diagnostic output.</p>
+<p>Using <code>print_error()</code> helps separate normal program output from error or debug information.</p>
 
 <h3>Syntax</h3>
-<pre>print_error(value1, value2, ...);
+<pre>
+<function>print_error</function>(value);
+<function>print_error</function>(value1, value2, ...);
 </pre>
+<table>
+  <thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>value</code></td>
+    <td>any</td>
+    <td>The value or expression to print.</td>
+  </tr>
+  </tbody>
+</table>
 
-<h3>Examples</h3>
-<pre>print_error("Error: invalid input");
-</pre>
+<h3>Description</h3>
+<p><code>print_error()</code> writes its output to the error stream instead of the standard output stream.</p>
+<p>Output written to stderr is not mixed with normal program output, which makes it easier to log or redirect separately.</p>
+
+<h3>Notes</h3>
+<ul>
+  <li>
+    <p>
+      Sends output to stderr instead of stdout.
+    </p>
+  </li>
+  <li>
+    <p>
+      Useful for logging, warnings, and errors.
+    </p>
+  </li>
+  <li>
+    <p>
+      Does not affect normal <code>print()</code> or <code>print_line()</code> output.
+    </p>
+  </li>
+  <li>
+    <p>
+      Can be redirected separately from normal output in most environments.
+    </p>
+  </li>
+</ul>
+
+<h3>See Also</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/print"><code>print()</code></a>
+      - prints without a newline to standard output
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/print_line"><code>print_line()</code></a>
+      - prints with newline to standard output
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/input"><code>input()</code></a>
+      - reads user input from standard input
+    </p>
+  </li>
+</ul>
