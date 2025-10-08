@@ -1,1 +1,81 @@
-<p>variable.page works!</p>
+<h2>Variables and Scope</h2>
+<p>Variables in DynoC are used to store data that can be read or modified during program execution.</p>
+<p>Each variable has a name, a type, and a value.</p>
+<p>Since DynoC is statically typed, you must declare a variable’s type before assigning a value.</p>
+
+<h3>Declaring Variables</h3>
+<p>To declare a variable, specify its type followed by a name and an optional initial value:</p>
+<pre>
+<int/> count;
+<float/> pi = <number>3.1415</number>;
+<bool/> active = <true/>;
+</pre>
+<p>If you declare a variable without assigning a value, it contains that type's default value.</p>
+
+<h3>Assigning Values</h3>
+<p>Use the <code>=</code> operator to assign or update a variable’s value.</p>
+<pre>
+<int/> score = <number>100</number>;
+score = <number>150</number>; <comment>// updated</comment>
+</pre>
+<p>The type of a variable cannot change after declaration.</p>
+<pre>
+<int/> x = <number>5</number>;
+x = <number>10</number>;           <comment>// valid</comment>
+x = <string>Hello Mom!</string>; <comment>// invalid (type mismatch)</comment>
+</pre>
+
+<h3>Constants</h3>
+<p>DynoC does not yet include a const keyword, but variables that are never reassigned can be treated as constants by
+  convention.</p>
+<pre>
+<float/> GRAVITY = <number>9.81</number>; <comment>// treat as constant</comment>
+</pre>
+<p>Future versions may introduce explicit constant declarations.</p>
+
+<h3>Scope</h3>
+<p>Scope determines where a variable can be accessed within a program.</p>
+<p>DynoC uses block scope, meaning variables exist only inside the <code>&#123;&#125;</code> block where they are
+  defined.</p>
+<pre>
+<void/> <function>example</function>()
+&#123;
+    <int/> a = <number>10</number>;
+
+    <if/> (a > <number>5</number>)
+    &#123;
+        <int/> b = <number>20</number>;
+        <function>print_line</function>(a); <comment>// OK</comment>
+        <function>print_line</function>(b); <comment>// OK</comment>
+    &#125;
+
+    <function>print_line</function>(a); <comment>// OK</comment>
+    <function>print_line</function>(b); <comment>// Error: b is out of scope</comment>
+&#125;
+</pre>
+<p>When the inner block ends, <code>b</code> is destroyed and cannot be used outside it.</p>
+
+<h3>Global Variables</h3>
+<p>Variables declared outside any function are global.</p>
+<p>They can be accessed from anywhere in the program unless shadowed by a local variable of the same name.</p>
+<pre>
+<int/> version = <number>3</number>;
+
+<void/> <function>show_version</function>()
+&#123;
+    <function>print_line</function>(version); <comment>// accessible here</comment>
+&#125;
+</pre>
+<p>Global variables remain in memory for the entire program lifetime.</p>
+
+<h3>Variable Shadowing</h3>
+<p>Currently, variable shadowing is not allowed, and the compiler will throw an error if it's tried.</p>
+<pre>
+<int/> value = <number>10</number>;
+
+<void/> <function>test</function>()
+&#123;
+  <int/> value = <number>5</number>; <comment>// Error: 'value' already exists</comment>
+  <function>print_line</function>(value);
+&#125;
+</pre>
