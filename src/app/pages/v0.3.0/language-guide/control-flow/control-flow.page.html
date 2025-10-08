@@ -1,35 +1,75 @@
 <h2>Control Flow</h2>
-<p>DynoC supports standard control flow constructs, similar to C-like languages.</p>
+<p>Control flow statements let you change how your program runs by making decisions and repeating actions.</p>
+<p>DynoC supports standard conditional and looping structures similar to C++ and Java.</p>
 
 <h3>If / Else</h3>
-<pre>var x = 10;
+<p>Use <code>if</code> to run code only when a condition is true.</p>
+<p>You can chain multiple conditions with <code>else if</code>, and handle all remaining cases with <code>else</code>.</p>
+<pre>
+<int/> a = <number>10</number>;
 
-if (x > 5) &#123;
-  print("Greater than 5");
-&#125; else &#123;
-  print("5 or less");
+<if/> (a > <number>10</number>)
+&#123;
+    <function>print_line</function>(<string>Greater than 10</string>);
+&#125;
+<else/> <if/> (a == <number>10</number>)
+&#123;
+    <function>print_line</function>(<string>Equal to 10</string>);
+&#125;
+<else/>
+&#123;
+    <function>print_line</function>(<string>Less than 10</string>);
 &#125;
 </pre>
 
 <h3>While Loop</h3>
-<pre>var i = 0;
-while (i < 5) &#123;
-  print(i);
-  i++;
+<p>A <code>while</code> loop repeats as long as its condition is true.</p>
+<pre>
+<int/> i = <number>0</number>;
+
+<while/> (i < <number>5</number>)
+&#123;
+    <function>print_line</function>(i);
+    i++;
 &#125;
 </pre>
 
 <h3>For Loop</h3>
-<pre>for (var i = 0; i < 3; i++) &#123;
-  print(i);
+A <code>for</code> loop is useful when you know how many times you want to run something.
+<pre>
+<for/> (<int/> i = <number>0</number>; i < <number>5</number>; i++)
+&#123;
+    <function>print_line</function>(i);
+&#125;
+</pre>
+<p>You can also omit parts of the loop if not needed:</p>
+<pre>
+<int/> i = <number>0</number>;
+<for/> (; i < <number>5</number>;)
+&#123;
+    <function>print_line</function>(i);
+    i++;
 &#125;
 </pre>
 
-<h3>Break / Continue</h3>
-<pre>for (var i = 0; i < 5; i++) &#123;
-  if (i == 2) continue;
-  if (i == 4) break;
-  print(i);
+<h3>Break and Continue</h3>
+<p>Use <code>break</code> to exit a loop early, and <code>continue</code> to skip to the next iteration.</p>
+<pre>
+<for/> (<int/> i = <number>0</number>; i < <number>10</number>; i++)
+&#123;
+    <if/> (i == <number>5</number>) <break/>;        <comment>// stop the loop</comment>
+    <if/> (i % <number>2</number> == <number>0</number>) <continue/>; <comment>// skip even numbers</comment>
+    <function>print_line</function>(i);
 &#125;
-// prints: 0, 1, 3
+</pre>
+
+<h3>Exit</h3>
+<p>Use <code>exit</code> to stop the entire program immediately.</p>
+<p>You can pass a value to indicate an exit code.</p>
+<pre>
+<if/> (has_error)
+&#123;
+    <function>print_error</function>(<string>Something went wrong!</string>);
+    <exit/> 1;
+&#125;
 </pre>
