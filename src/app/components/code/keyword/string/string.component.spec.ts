@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StringComponent } from './string.component';
+import { StringKWComponent } from './string.component';
 
 describe('StringComponent', () => {
-  let component: StringComponent;
-  let fixture: ComponentFixture<StringComponent>;
+  let component: StringKWComponent;
+  let fixture: ComponentFixture<StringKWComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [StringComponent]
+      imports: [StringKWComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(StringComponent);
+    fixture = TestBed.createComponent(StringKWComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
