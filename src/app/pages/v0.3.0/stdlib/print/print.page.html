@@ -1,11 +1,75 @@
 <h2>print()</h2>
-<p>Writes one or more values to standard output without appending a newline.</p>
+<p>The <code>print()</code> function outputs text or values to the standard output (usually the console) without adding
+  a newline at the end.</p>
+<p>It can print any value, including numbers, strings, booleans, arrays, and characters.</p>
+<p>Multiple values can be printed in one call, separated by commas.</p>
 
 <h3>Syntax</h3>
-<pre>print(value1, value2, ...);
+<pre>
+<function>print</function>(value);
+<function>print</function>(value1, value2, ...);
 </pre>
+<table>
+  <thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>value</code></td>
+    <td>any</td>
+    <td>The value or expression to print.</td>
+  </tr>
+  </tbody>
+</table>
 
-<h3>Examples</h3>
-<pre>print("Hello, ");
-print("World!"); // outputs: Hello, World!
-</pre>
+<h3>Description</h3>
+<p><code>print()</code> converts each argument to its string form and writes it directly to the output stream.</p>
+<p>Unlike <code>print_line()</code>, it does not move the cursor to a new line after printing.</p>
+<p>This makes it useful for inline output or building strings across multiple calls.</p>
+
+<h3>Notes</h3>
+<ul>
+  <li>
+    <p>
+      <code>print()</code> automatically converts non-string values to strings.
+    </p>
+  </li>
+  <li>
+    <p>To add a newline at the end, use <a href="/documentation/0.3.0/standard-library/print_line">
+      <code>print_line()</code>
+    </a>.
+    </p>
+  </li>
+  <li>
+    <p>To print error messages, use <a href="/documentation/0.3.0/standard-library/print_error">
+      <code>print_error()</code>
+    </a>, which writes to the error stream.
+    </p>
+  </li>
+</ul>
+
+<h3>See Also</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/print_line"><code>print_line()</code></a>
+      - prints text followed by a newline
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/print_error"><code>print_error()</code></a>
+      - prints to standard error
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/input"><code>input()</code></a>
+      - reads user input from standard input
+    </p>
+  </li>
+</ul>
