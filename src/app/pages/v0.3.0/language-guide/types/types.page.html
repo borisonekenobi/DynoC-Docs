@@ -1,13 +1,97 @@
 <h2>Types</h2>
-<p>DynoC supports dynamic types with optional explicit casting:</p>
-<ul>
-  <li><code>int</code></li>
-  <li><code>float</code></li>
-  <li><code>bool</code></li>
-  <li><code>char</code></li>
-  <li><code>string</code></li>
-  <li><code>array</code></li>
-</ul>
-<pre>var a = 42;       // int
-var b = 3.14;     // float
-var s = "hello";  // string</pre>
+<p>DynoC is currently statically typed, meaning each variable and expression has a fixed type at compile time.</p>
+<p>You must declare a variable’s type before assigning a value, and the type cannot change later.</p>
+
+<h3>Types</h3>
+<p>DynoC provides several primitive types:</p>
+<code>int</code>, <code>float</code>, <code>bool</code>, <code>char</code>, <code>string</code>, <code>array</code>
+
+<h3>Integer (<code>int</code>)</h3>
+<p>The <code>int</code> type stores whole numbers, both positive and negative.</p>
+<pre>
+<int/> a = <number>10</number>;
+<int/> b = <number>-3</number>;
+<int/> sum = a + b; <comment>// 7</comment>
+</pre>
+<p>Division between two integers truncates toward zero:</p>
+<pre>
+<int/> x = <number>7</number> / <number>2</number>; <comment>// 3</comment>
+</pre>
+
+<h3>Floating Point (<code>float</code>)</h3>
+<p>The <code>float</code> type stores decimal numbers.</p>
+<pre>
+<float/> x = <number>3.14</number>;
+<float/> y = <number>-0.5</number>;
+<float/> z = x + y; <comment>// 2.64</comment>
+</pre>
+<p>Operations between <code>int</code> and <code>float</code> are implicitly casted:</p>
+<pre>
+<int/> a = <number>3</number>;
+<float/> b = <number>2.5</number>;
+<float/> result = a * b; <comment>// 7.5</comment>
+</pre>
+
+<h3>Boolean (<code>bool</code>)</h3>
+<p>The <code>bool</code> type represents a logical value: <code>true</code> or <code>false</code>.</p>
+<pre>
+<bool/> is_ready = <true/>;
+<bool/> passed = (score >= <number>50</number>);
+</pre>
+<p>Booleans can be used directly in control flow statements:</p>
+<pre>
+<if/> (is_ready)
+&#123;
+    <function>print_line</function>(<string>Ready to go!</string>);
+&#125;
+</pre>
+
+<h3>Character (<code>char</code>)</h3>
+<p>The <code>char</code> type stores a single ASCII or Extended-ASCII (values between 0-255) character in single quotes.
+</p>
+<pre>
+<char-kw/> c = <char>A</char>;
+</pre>
+<p>A <code>char</code> can be converted to an <code>int</code> to get its numeric value, or vice versa using implicit
+  casting:</p>
+<pre>
+<int/> code = <char>A</char>; <comment>// 65</comment>
+<char-kw/> letter = <number>66</number> <comment>// 'B'</comment>
+</pre>
+
+<h3>String (<code>string</code>)</h3>
+<p>The <code>string</code> type stores a sequence of characters in double quotes.</p>
+<pre>
+<string-kw/> name = <string>DynoC</string>;
+</pre>
+<p>You can concatenate strings using the <code>+</code> operator:</p>
+<pre>
+<string-kw/> msg = <string>Hello, </string> + name + <string>!</string>;
+</pre>
+
+<h3>Arrays (<code>[]</code>)</h3>
+<p>Arrays hold an ordered collection of elements of the same type.</p>
+<pre>
+<int/>[] nums = [<number>1</number>, <number>2</number>, <number>3</number>, <number>4</number>];
+</pre>
+<p>Arrays can be defined for any type:</p>
+<pre>
+<string-kw/>[] names = [<string>Alice</string>, <string>Bob</string>, <string>Charlie</string>];
+</pre>
+<p>You can access and modify elements using indices:</p>
+<pre>
+nums[<number>1</number>] = <number>10</number>;        <comment>// nums = [1, 10, 3, 4]</comment>
+<function>print_line</function>(nums[<number>0</number>]); <comment>// 1</comment>
+</pre>
+<p>The length of an array is stored in the <code>length</code> property:</p>
+<pre>
+<function>print_line</function>(<string>There is </string>, nums.length, <string> numbers in the nums array.</string>);
+</pre>
+
+<h3>Type Casting</h3>
+<p>DynoC currently only supports implicit type casting. (this will change in the future!)</p>
+<pre>
+<float/> a = <number>3</number>;   <comment>// a = 3.0</comment>
+<int/> b = a / <number>2</number>; <comment>// b = 1</comment>
+</pre>
+<p>Casting does not modify the original variable unless reassigned.</p>
