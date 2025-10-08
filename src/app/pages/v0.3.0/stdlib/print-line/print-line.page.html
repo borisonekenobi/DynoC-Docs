@@ -1,14 +1,79 @@
 <h2>print_line()</h2>
-<p>Writes one or more values to standard output followed by a newline character.</p>
+<p>The <code>print()</code> function outputs text or values to the standard output (usually the console) and adds a
+  newline at the end.</p>
+<p>It behaves like <a href="/documentation/0.3.0/standard-library/print"><code>print()</code></a>, but automatically
+  moves the cursor to the next line after printing.</p>
+<p>This is the most common way to display messages or results.</p>
 
 <h3>Syntax</h3>
-<pre>print_line(value1, value2, ...);
+<pre>
+<function>print_line</function>(value);
+<function>print_line</function>(value1, value2, ...);
 </pre>
+<table>
+  <thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>value</code></td>
+    <td>any</td>
+    <td>The value or expression to print.</td>
+  </tr>
+  </tbody>
+</table>
 
-<h3>Examples</h3>
-<pre>print_line("Hello");
-print_line("World");
-// outputs:
-// Hello
-// World
-</pre>
+<h3>Description</h3>
+<p><code>print_line()</code> converts each argument to a string and writes them to the output stream, followed by a
+  newline character (<code>\n</code>).</p>
+<p>This function is useful for printing entire lines or structured output without manually adding <code>"\n"</code>.</p>
+
+<h3>Notes</h3>
+<ul>
+  <li>
+    <p>
+      Automatically appends a newline (<code>\n</code>) after all output.
+    </p>
+  </li>
+  <li>
+    <p>
+      Values are separated by spaces when multiple arguments are passed.
+    </p>
+  </li>
+  <li>
+    <p>
+      To print without a newline, use <a href="/documentation/0.3.0/standard-library/print"><code>print()</code></a>.
+    </p>
+  </li>
+  <li>
+    <p>
+      For errors, use <a href="/documentation/0.3.0/standard-library/print_error"><code>print_error()</code></a>.
+    </p>
+  </li>
+</ul>
+
+<h3>See Also</h3>
+<ul>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/print"><code>print()</code></a>
+      - prints without a newline
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/print_error"><code>print_error()</code></a>
+      - prints to standard error
+    </p>
+  </li>
+  <li>
+    <p>
+      <a href="/documentation/0.3.0/standard-library/input"><code>input()</code></a>
+      - reads user input from standard input
+    </p>
+  </li>
+</ul>
