@@ -1,1 +1,353 @@
-<p>operators.page works!</p>
+<h2>Operators</h2>
+<p>Operators in DynoC are symbols that perform operations on values or variables.</p>
+<p>DynoC supports a wide range of unary and binary operators similar to C++ and Java.</p>
+
+<h3>Arithmetic Operators</h3>
+<p>Arithmetic operators perform basic math on numeric types.</p>
+<!-- TODO: not sure if tables are the correct choice here -->
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>+</code></td>
+    <td>Addition</td>
+    <td><code>3 + 2</code></td>
+    <td><code>5</code></td>
+  </tr>
+  <tr>
+    <td><code>-</code></td>
+    <td>Subtraction</td>
+    <td><code>5 - 1</code></td>
+    <td><code>4</code></td>
+  </tr>
+  <tr>
+    <td><code>*</code></td>
+    <td>Multiplication</td>
+    <td><code>4 * 2</code></td>
+    <td><code>8</code></td>
+  </tr>
+  <tr>
+    <td><code>/</code></td>
+    <td>Division</td>
+    <td><code>8 / 2</code></td>
+    <td><code>4</code></td>
+  </tr>
+  <tr>
+    <td><code>%</code></td>
+    <td>Modulo (remainder)</td>
+    <td><code>9 % 4</code></td>
+    <td><code>1</code></td>
+  </tr>
+  </tbody>
+</table>
+<div class="note-box note-info">
+  <strong>Info:</strong> Division between two <code>int</code> values results in an <code>int</code>. Use
+  <code>float</code> for decimal results.
+</div>
+
+<h3>Unary Operators</h3>
+<p>Unary operators act on a single operand.</p>
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>+</code></td>
+    <td>Unary plus</td>
+    <td><code>+x</code></td>
+    <td><code>x</code></td>
+  </tr>
+  <tr>
+    <td><code>-</code></td>
+    <td>Negation</td>
+    <td><code>-x</code></td>
+    <td>Negative value</td>
+  </tr>
+  <tr>
+    <td><code>++</code></td>
+    <td>Increment (pre/post)</td>
+    <td><code>++x</code>, <code>x++</code></td>
+    <td>Increase by 1</td>
+  </tr>
+  <tr>
+    <td><code>--</code></td>
+    <td>Decrement (pre/post)</td>
+    <td><code>--x</code>, <code>x--</code></td>
+    <td>Decrease by 1</td>
+  </tr>
+  <tr>
+    <td><code>!</code></td>
+    <td>Logical NOT</td>
+    <td><code>!true</code></td>
+    <td><code>false</code></td>
+  </tr>
+  <tr>
+    <td><code>~</code></td>
+    <td>Bitwise NOT</td>
+    <td><code>~5</code></td>
+    <td>Bitwise complement</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Comparison Operators</h3>
+<p>Comparison operators return a <code>bool</code> (<code>true</code> or <code>false</code>).</p>
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>==</code></td>
+    <td>Equal to</td>
+    <td><code>a == b</code></td>
+    <td><code>true</code> if equal</td>
+  </tr>
+  <tr>
+    <td><code>!=</code></td>
+    <td>Not equal to</td>
+    <td><code>a != b</code></td>
+    <td><code>true</code> if not equal</td>
+  </tr>
+  <tr>
+    <td><code>&lt;</code></td>
+    <td>Less than</td>
+    <td><code>a &lt; b</code></td>
+    <td><code>true</code> if less</td>
+  </tr>
+  <tr>
+    <td><code>&lt;=</code></td>
+    <td>Less or equal</td>
+    <td><code>a &lt;= b</code></td>
+    <td><code>true</code> if less or equal</td>
+  </tr>
+  <tr>
+    <td><code>&gt;</code></td>
+    <td>Greater than</td>
+    <td><code>a &gt; b</code></td>
+    <td><code>true</code> if greater</td>
+  </tr>
+  <tr>
+    <td><code>&gt;=</code></td>
+    <td>Greater or equal</td>
+    <td><code>a &gt;= b</code></td>
+    <td><code>true</code> if greater or equal</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Logical Operators</h3>
+<p>Combine or invert boolean values.</p>
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>&&</code></td>
+    <td>Logical AND</td>
+    <td><code>a && b</code></td>
+    <td><code>true</code> if both are true</td>
+  </tr>
+  <tr>
+    <td><code>||</code></td>
+    <td>Logical OR</td>
+    <td><code>a || b</code></td>
+    <td><code>true</code> if either is true</td>
+  </tr>
+  <tr>
+    <td><code>!</code></td>
+    <td>Logical NOT</td>
+    <td><code>!a</code></td>
+    <td>Inverts boolean value</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Bitwise Operators</h3>
+<p>Operate on binary representations of integers.</p>
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>&amp;</code></td>
+    <td>Bitwise AND</td>
+    <td><code>a &amp; b</code></td>
+    <td>Bitwise AND</td>
+  </tr>
+  <tr>
+    <td><code>|</code></td>
+    <td>Bitwise OR</td>
+    <td><code>a | b</code></td>
+    <td>Bitwise OR</td>
+  </tr>
+  <tr>
+    <td><code>^</code></td>
+    <td>Bitwise XOR</td>
+    <td><code>a ^ b</code></td>
+    <td>Bitwise XOR</td>
+  </tr>
+  <tr>
+    <td><code>~</code></td>
+    <td>Bitwise NOT</td>
+    <td><code>~a</code></td>
+    <td>Bitwise complement</td>
+  </tr>
+  <tr>
+    <td><code>&lt;&lt;</code></td>
+    <td>Left shift</td>
+    <td><code>a &lt;&lt; 1</code></td>
+    <td>Multiply by 2</td>
+  </tr>
+  <tr>
+    <td><code>&gt;&gt;</code></td>
+    <td>Right shift</td>
+    <td><code>a &gt;&gt; 1</code></td>
+    <td>Divide by 2</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Assignment Operators</h3>
+<p></p>
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Equivalent to</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>=</code></td>
+    <td>Assignment</td>
+    <td><code>a = b</code></td>
+    <td>—</td>
+  </tr>
+</table>
+
+<h3>Indexing and Member Access</h3>
+<p></p>
+<table>
+  <thead>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><code>[]</code></td>
+    <td>Index access</td>
+    <td><code>arr[2]</code></td>
+    <td>Returns element at index 2</td>
+  </tr>
+  <tr>
+    <td><code>.</code></td>
+    <td>Member access</td>
+    <td><code>obj.field</code></td>
+    <td>Accesses field or method</td>
+  </tr>
+  </tbody>
+</table>
+<div class="note-box note-info">
+  <strong>Info:</strong> Strings and arrays both support indexing with <code>[n]</code>.
+</div>
+
+<h3>Operator Precedence</h3>
+<p>From highest to lowest.</p>
+<table>
+  <thead>
+  <tr>
+    <th>Precedence</th>
+    <th>Operators</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td><code>=</code></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td><code>||</code></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><code>&amp;&amp;</code></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td><code>|</code></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td><code>^</code></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td><code>&amp;</code></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td><code>==</code>, <code>!=</code></td>
+  <tr>
+    <td>8</td>
+    <td><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td><code>&lt;&lt;</code>, <code>&gt;&gt;</code></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td><code>+</code>, <code>-</code></td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td><code>*</code>, <code>/</code>, <code>%</code></td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td><code>.</code></td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td><code>[]</code>, <code>++</code>, <code>--</code>, <code>!</code>, <code>~</code></td>
+  </tr>
+  </tbody>
+</table>
