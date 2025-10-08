@@ -1,33 +1,109 @@
 <h2>Functions</h2>
-<p>Functions in DynoC are defined using a syntax similar to C++ and Java, but with dynamic typing by default.</p>
+<p>Functions in DynoC are reusable blocks of code that perform a specific task.</p>
+<p>They help organize code, reduce repetition, and improve readability.</p>
+<p>Each function can take input values (called parameters) and optionally return a result.</p>
 
-<h3>Basic Function</h3>
-<pre>void greet(string name) &#123;
-  print("Hello, " + name);
+<h3>Defining a Function</h3>
+<p>Functions are defined with their type followed by the function name, parameters (if any), and a block of code in
+  <code>&#123;&#125;</code>.</p>
+<pre>
+<void/> <function>greet</function>()
+&#123;
+    <function>print_line</function>(<string>Hello from DynoC!</string>);
+&#125;
+</pre>
+<p>Function definitions can appear anywhere in the source file, outside of other functions, but they must be defined
+  before they are called.</p>
+
+<h3>Calling a Function</h3>
+<p>To call a function, use its name followed by parentheses <code>()</code>.</p>
+<pre>
+<function>greet</function>();
+</pre>
+<p>If the function has parameters, pass values inside the parentheses.</p>
+<pre>
+<void/> <function>greet_user</function>(<string-kw/> name)
+&#123;
+    <function>print_line</function>(<string>Hello</string> + name + <string>!</string>);
 &#125;
 
-greet("Boris");
+<function>greet_user</function>(<string>Boris</string>);
 </pre>
 
-<h3>Returning Values</h3>
-<pre>int square(int x) &#123;
-  return x * x;
+<h3>Parameters</h3>
+<p>Parameters act as placeholders for input values.</p>
+<p>You define them inside the parentheses after the function name.</p>
+<pre>
+<void/> <function>add</function>(<int/> a, <int/> b)
+&#123;
+    <int/> sum = a + b;
+    <function>print_line</function>(sum);
+&#125;
+</pre>
+<p>You can pass expressions or variables as arguments:</p>
+<pre>
+<int/> x = <number>3</number>;
+<int/> y = <number>7</number>;
+<function>add</function>(x, y); <comment>// prints 10</comment>
+</pre>
+<p>Parameters are local to the function and are destroyed when the function ends.</p>
+
+<h3>Return Values</h3>
+<p>Functions can return a value using the <code>return</code> keyword.</p>
+<pre>
+<int/> <function>multiply</function>(<int/> a, <int/> b)
+&#123;
+    <return/> a * b;
 &#125;
 
-var result = square(5); // 25
+<int/> result = <function>multiply</function>(<number>4</number>, <number>5</number>);
+<function>print_line</function>(result); <comment>// 20</comment>
 </pre>
 
-<!--<h3>Closures</h3>-->
-<!--<p>Functions can capture variables-and-scope from their scope, allowing simple closures:</p>-->
-<!--<pre>func counter() &#123;-->
-<!--  var count = 0;-->
-<!--  return func() &#123;-->
-<!--        count++;-->
-<!--        return count;-->
-<!--    &#125;;-->
-<!--&#125;-->
+<h3>Void Functions</h3>
+<p>A <code>void</code> function does not return anything.</p>
+<p>Use <code>void</code> when the function performs an action but doesn’t produce a value.</p>
+<pre>
+<void/> <function>log_error</function>(<string-kw/> msg)
+&#123;
+    <function>print_line</function>(<string>Error: </string> + msg);
+&#125;
+</pre>
 
-<!--var c = counter();-->
-<!--print(c()); // 1-->
-<!--print(c()); // 2-->
-<!--</pre>-->
+<h3>Recursion</h3>
+<p>A function can call itself, this is called recursion.</p>
+<p>Recursion is useful for tasks that can be defined in terms of smaller subproblems.</p>
+<pre>
+<int/> <function>factorial</function>(<int/> n)
+&#123;
+    <if/> (n <= <number>1</number>) <return/> <number>1</number>;
+    <return/> n * <function>factorial</function>(n - <number>1</number>);
+&#125;
+
+<function>print_line</function>(<function>factorial</function>(<number>5</number>)); <comment>// 120</comment>
+</pre>
+
+<h3>Function Overloading</h3>
+<p>DynoC supports function overloading.</p>
+<p>You can define multiple functions with the same name as long as their parameter types or counts are different.</p>
+<pre>
+<int/> <function>add</function>(<int/> a, <int/> b)
+&#123;
+    <return/> a + b;
+&#125;
+
+<float/> <function>add</function>(<float/> a, <float/> b)
+&#123;
+    <return/> a + b;
+&#125;
+
+<int/> <function>add</function>(<int/> a, <int/> b, <int/> c)
+&#123;
+    <return/> a + b + c;
+&#125;
+
+<function>print_line</function>(<function>add</function>(<number>2</number>, <number>3</number>));     <comment>// calls add(int, int)</comment>
+<function>print_line</function>(<function>add</function>(<number>2.5</number>, <number>3.1</number>)); <comment>// calls add(float, float)</comment>
+<function>print_line</function>(<function>add</function>(<number>1</number>, <number>2</number>, <number>3</number>));  <comment>// calls add(int, int, int)</comment>
+</pre>
+<p>The correct function version is chosen based on the number and types of arguments passed.</p>
