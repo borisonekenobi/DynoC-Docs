@@ -1,32 +1,77 @@
 import {Component} from '@angular/core';
 import {
-  KeywordComponent
-} from '../../../../components/code/keyword/keyword.component';
-import {
-  NumberComponent
+  NumberComponent,
 } from '../../../../components/code/number/number.component';
 import {
-  FunctionComponent
+  FunctionComponent,
 } from '../../../../components/code/function/function.component';
 import {
-  StringComponent
+  StringComponent,
 } from '../../../../components/code/string/string.component';
 import {
-  CommentComponent
+  CommentComponent,
 } from '../../../../components/code/comment/comment.component';
 import {CharComponent} from '../../../../components/code/char/char.component';
 import {
-  DCDocCommentComponent
+  DCDocCommentComponent,
 } from '../../../../components/code/dcdoc-comment/dcdoc-comment.component';
+import {
+  IntComponent
+} from '../../../../components/code/keyword/int/int.component';
+import {
+  FloatComponent
+} from '../../../../components/code/keyword/float/float.component';
+import {IfComponent} from '../../../../components/code/keyword/if/if.component';
+import {
+  ElseComponent
+} from '../../../../components/code/keyword/else/else.component';
+import {
+  VarComponent
+} from '../../../../components/code/keyword/var/var.component';
+import {
+  StringKWComponent
+} from '../../../../components/code/keyword/string/string.component';
+import {
+  ReturnComponent
+} from '../../../../components/code/keyword/return/return.component';
+import {
+  CharKWComponent
+} from '../../../../components/code/keyword/char/char-kw.component';
+import {
+  VoidComponent
+} from '../../../../components/code/keyword/void/void.component';
+import {
+  ForComponent
+} from '../../../../components/code/keyword/for/for.component';
+import {
+  WhileComponent
+} from '../../../../components/code/keyword/while/while.component';
 
 @Component({
   selector: 'app-syntax',
   imports: [
-    KeywordComponent, NumberComponent, FunctionComponent,
-    StringComponent, CommentComponent, CharComponent, DCDocCommentComponent],
+    NumberComponent,
+    FunctionComponent,
+    StringComponent,
+    CommentComponent,
+    CharComponent,
+    DCDocCommentComponent,
+    IntComponent,
+    FloatComponent,
+    IfComponent,
+    ElseComponent,
+    VarComponent,
+    StringComponent,
+    StringComponent,
+    StringComponent,
+    StringKWComponent,
+    ReturnComponent,
+    CharKWComponent,
+    VoidComponent,
+    ForComponent,
+    WhileComponent],
   templateUrl: './syntax.page.html',
   styleUrl: './syntax.page.css',
 })
 export class SyntaxPage {
-
 }

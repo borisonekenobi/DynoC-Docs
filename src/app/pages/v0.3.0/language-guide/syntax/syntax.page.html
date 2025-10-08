@@ -9,11 +9,11 @@
 </pre>
 <p>Blocks of code use curly braces <code>&#123;&#125;</code>, just like in C-style languages.</p>
 <pre>
-<keyword>if</keyword> (x > <number>0</number>)
+<if/> (x > <number>0</number>)
 &#123;
     <function>print_line</function>(<string>Positive</string>);
 &#125;
-<keyword>else</keyword>
+<else/>
 &#123;
     <function>print_line</function>(<string>Negative</string>);
 &#125;
@@ -38,20 +38,19 @@
   params: [{name: 'a', description: 'The integer value to square'}],
   returns: 'The squared result of the input value'
 }"/>
-<keyword>int</keyword> <function>square</function>(<keyword>int</keyword> a)
+<int/> <function>square</function>(<int/> a)
 &#123;
-    <keyword>return</keyword> a * a;
+    <return/> a * a;
 &#125;
 </pre>
 
 <h3>Variables</h3>
-Use one of the <a href="/documentation/0.3.0/language-guide/types">types</a> or
-<code>var</code> to declare a variable. The
-<code>var</code> keyword will infer the type from the assigned value.
+<p>Use one of the <a href="/documentation/0.3.0/language-guide/types">types</a> or <code>var</code> to declare a
+  variable. The <code>var</code> keyword will infer the type from the assigned value.</p>
 <pre>
-<keyword>var</keyword> name = <string>Boris</string>;
-<keyword>var</keyword> age = <number>21</number>;
-<keyword>var</keyword> pi = <number>3.14159265</number>;
+<var-kw/> name = <string>Boris</string>;
+<var-kw/> age = <number>21</number>;
+<var-kw/> pi = <number>3.14159265</number>;
 </pre>
 <p>You can reassign variables at any time.</p>
 <pre>
@@ -59,8 +58,8 @@ age = 22;
 </pre>
 <p>Explicit type declarations are also allowed:</p>
 <pre>
-<keyword>int</keyword> x = <number>5</number>;
-<keyword>float</keyword> y = <number>2.5</number>;
+<int/> x = <number>5</number>;
+<float/> y = <number>2.5</number>;
 </pre>
 
 <h3>Operators</h3>
@@ -96,7 +95,7 @@ age = 22;
       <code>>=</code>
     </td>
     <td>
-      <pre><keyword>if</keyword> (x == <number>10</number>)</pre>
+      <pre><if/> (x == <number>10</number>)</pre>
     </td>
   </tr>
   <tr>
@@ -107,7 +106,7 @@ age = 22;
       <code>||</code>
     </td>
     <td>
-      <pre><keyword>if</keyword> (!done)</pre>
+      <pre><if/> (!done)</pre>
     </td>
   </tr>
   <tr>
@@ -141,29 +140,29 @@ age = 22;
 <p>Strings are written in double quotes.</p>
 <p>You can concatenate them with <code>+</code>.</p>
 <pre>
-<keyword>string</keyword> greeting = <string>Hello, </string> + <string>World!</string>;
+<string-kw/> greeting = <string>Hello, </string> + <string>World!</string>;
 <function>print_line</function>(greeting);
 </pre>
 <p>Characters use single quotes:</p>
 <pre>
-<keyword>char</keyword> letter = <char>A</char>;
+<char-kw/> letter = <char>A</char>;
 </pre>
 
 <h3>Arrays</h3>
 <p>Arrays hold multiple values of a specified type.</p>
 <pre>
-<keyword>int</keyword>[] numbers = [<number>1</number>, <number>2</number>, <number>3</number>, <number>4</number>];
+<int/>[] numbers = [<number>1</number>, <number>2</number>, <number>3</number>, <number>4</number>];
 <function>print_line</function>(numbers[<number>0</number>]); <comment>// Output: 1</comment>
 </pre>
 <p>Arrays can be nested.</p>
 <pre>
-<keyword>int</keyword>[][] nums = [
+<int/>[][] nums = [
     [<number>1</number>, <number>2</number>, <number>3</number>],
     [<number>4</number>, <number>5</number>, <number>6</number>],
     [<number>7</number>, <number>8</number>, <number>9</number>],
 ]
 
-<keyword>var</keyword> more_nums = [
+<var-kw/> more_nums = [
     [<number>1.1</number>, <number>2.2</number>],
     [<number>3.3</number>, <number>4.4</number>, <number>5.5</number>, <number>6.6</number>],
     [<number>7.7</number>, <number>8.8</number>, <number>9.9</number>]
@@ -173,7 +172,7 @@ age = 22;
 <h3>Functions</h3>
 <p>Functions are defined using their return type and parameters</p>
 <pre>
-<keyword>void</keyword> <function>greet</function>(<keyword>string</keyword> name)
+<void/> <function>greet</function>(<string-kw/> name)
 &#123;
     <function>print_line</function>(<string>Hello, </string>, name);
 &#125;
@@ -184,34 +183,34 @@ age = 22;
 </pre>
 <p>You can also return values using <code>return</code></p>
 <pre>
-<keyword>int</keyword> <function>add</function>(<keyword>int</keyword> a, <keyword>int</keyword> b)
+<int/> <function>add</function>(<int/> a, <int/> b)
 &#123;
-    <keyword>return</keyword> a + b;
+    <return/> a + b;
 &#125;
 </pre>
 
 <h3>Control Flow</h3>
 <p>DynoC supports common control flow structures:</p>
 <pre>
-<keyword>if</keyword> (x > <number>0</number>)
+<if/> (x > <number>0</number>)
 &#123;
     <function>print_line</function>(<string>Positive</string>);
 &#125;
-<keyword>else</keyword> <keyword>if</keyword> (x < <number>0</number>)
+<else/> <if/> (x < <number>0</number>)
 &#123;
     <function>print_line</function>(<string>Negative</string>);
 &#125;
-<keyword>else</keyword>
+<else/>
 &#123;
     <function>print_line</function>(<string>Zero</string>);
 &#125;
 
-<keyword>for</keyword> (<keyword>var</keyword> i = <number>0</number>; i < <number>5</number>; i++)
+<for/> (<var-kw/> i = <number>0</number>; i < <number>5</number>; i++)
 &#123;
     <function>print_line</function>(i);
 &#125;
 
-<keyword>while</keyword> (<comment>/* condition */</comment>)
+<while/> (<comment>/* condition */</comment>)
 &#123;
     <comment>// repeat until false</comment>
 &#125;
@@ -226,18 +225,18 @@ age = 22;
 </pre>
 <p>Input function:</p>
 <pre>
-<keyword>string</keyword> name = <function>input</function>(<string>Enter name: </string>);
+<string-kw/> name = <function>input</function>(<string>Enter name: </string>);
 </pre>
 
 <h3>Example Program:</h3>
 <p>Here's an example of the implementation of the Fibonacci Sequence in DynoC!</p>
 <pre>
-<keyword>int</keyword> <function>fibonacci</function>(<keyword>int</keyword> n)
+<int/> <function>fibonacci</function>(<int/> n)
 &#123;
-    <keyword>if</keyword> (n <= <number>1</number>) <keyword>return</keyword> <number>0</number>;
-    <keyword>if</keyword> (n == <number>2</number>) <keyword>return</keyword> <number>1</number>;
+    <if/> (n <= <number>1</number>) <return/> <number>0</number>;
+    <if/> (n == <number>2</number>) <return/> <number>1</number>;
 
-    <keyword>return</keyword> <function>fibonacci</function>(n - <number>1</number>) + <function>fibonacci</function>(n - <number>2</number>);
+    <return/> <function>fibonacci</function>(n - <number>1</number>) + <function>fibonacci</function>(n - <number>2</number>);
 &#125;
 
 <function>print_line</function>(<string>The 5th Fibonacci number is </string>, <function>fibonacci</function>(<number>5</number>));
