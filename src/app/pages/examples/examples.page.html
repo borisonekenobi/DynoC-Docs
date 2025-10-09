@@ -4,32 +4,40 @@
 
   <h2>Hello World</h2>
   <pre>
-print_line("Hello, world!");
-  </pre>
+<print_line/>(<string>Hello, world!</string>);
+</pre>
 
   <h2>Variables and Math</h2>
   <pre>
-var x = 10;
-var y = 20;
-print_line("x + y =", x + y);
-  </pre>
+<var-kw/> x = <number>10</number>;
+<var-kw/> y = <number>20</number>;
+<print_line/>(<string>x + y = </string>, x + y);
+</pre>
 
   <h2>Control Flow</h2>
   <pre>
-var n = 5;
-if (n &gt; 0) &#123;
-    print_line("Positive");
-&#125; else &#123;
-    print_line("Non-positive");
+<var-kw/> n = <number>5</number>;
+<if/> (n &gt; <number>0</number>)
+&#123;
+    <print_line/>(<string>Positive</string>);
 &#125;
-  </pre>
+<else/> <if/> (n == <number>0</number>)
+&#123;
+    <print_line/>(<string>Zero</string>);
+&#125;
+<else/>
+&#123;
+    <print_line/>(<string>Negative</string>);
+&#125;
+</pre>
 
   <h2>Functions</h2>
   <pre>
-int square(int n) &#123;
-    return n * n
+<int/> <function>square</function>(<int/> n)
+&#123;
+    <return/> n * n
 &#125;
 
-print_line("Square of 4:", square(4));
-  </pre>
+<print_line/>(<string>Square of 4: </string>, square(<number>4</number>));
+</pre>
 </div>

@@ -7,9 +7,6 @@ import {
 } from '../../../../components/code/number/number.component';
 import {IfComponent} from '../../../../components/code/keyword/if/if.component';
 import {
-  FunctionComponent,
-} from '../../../../components/code/function/function.component';
-import {
   StringComponent,
 } from '../../../../components/code/string/string.component';
 import {
@@ -33,6 +30,12 @@ import {
 import {
   ExitComponent
 } from '../../../../components/code/keyword/exit/exit.component';
+import {
+  PrintLineComponent
+} from '../../../../components/code/function/print-line/print-line.component';
+import {
+  PrintErrorComponent
+} from '../../../../components/code/function/print-error/print-error.component';
 
 @Component({
   selector: 'app-control-flow',
@@ -40,7 +43,6 @@ import {
     IntComponent,
     NumberComponent,
     IfComponent,
-    FunctionComponent,
     StringComponent,
     ElseComponent,
     WhileComponent,
@@ -49,6 +51,8 @@ import {
     ContinueComponent,
     CommentComponent,
     ExitComponent,
+    PrintLineComponent,
+    PrintErrorComponent,
   ],
   templateUrl: './control-flow.page.html',
   styleUrl: './control-flow.page.css',

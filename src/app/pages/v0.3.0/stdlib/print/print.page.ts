@@ -1,12 +1,13 @@
 import {Component} from '@angular/core';
 import {
-  FunctionComponent,
-} from '../../../../components/code/function/function.component';
+  PrintComponent
+} from '../../../../components/code/function/print/print.component';
 
 @Component({
   selector: 'app-print',
   imports: [
-    FunctionComponent],
+    PrintComponent,
+  ],
   templateUrl: './print.page.html',
   styleUrl: './print.page.css',
 })

@@ -6,9 +6,6 @@ import {
   CommentComponent,
 } from '../../../../components/code/comment/comment.component';
 import {
-  FunctionComponent,
-} from '../../../../components/code/function/function.component';
-import {
   StringComponent,
 } from '../../../../components/code/string/string.component';
 import {CharComponent} from '../../../../components/code/char/char.component';
@@ -31,6 +28,9 @@ import {
 import {
   TrueComponent,
 } from '../../../../components/code/keyword/true/true.component';
+import {
+  PrintLineComponent
+} from '../../../../components/code/function/print-line/print-line.component';
 
 @Component({
   selector: 'app-types',
@@ -42,11 +42,12 @@ import {
     BoolComponent,
     TrueComponent,
     IfComponent,
-    FunctionComponent,
     StringComponent,
     CharKWComponent,
     CharComponent,
-    StringKWComponent],
+    StringKWComponent,
+    PrintLineComponent,
+  ],
   templateUrl: './types.page.html',
   styleUrl: './types.page.css',
 })

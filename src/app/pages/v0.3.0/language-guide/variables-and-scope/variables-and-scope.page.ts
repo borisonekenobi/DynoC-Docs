@@ -27,6 +27,9 @@ import {
   FunctionComponent
 } from '../../../../components/code/function/function.component';
 import {IfComponent} from '../../../../components/code/keyword/if/if.component';
+import {
+  PrintLineComponent
+} from '../../../../components/code/function/print-line/print-line.component';
 
 @Component({
   selector: 'app-variables-and-scope.page',
@@ -41,6 +44,7 @@ import {IfComponent} from '../../../../components/code/keyword/if/if.component';
     VoidComponent,
     FunctionComponent,
     IfComponent,
+    PrintLineComponent,
   ],
   templateUrl: './variables-and-scope.page.html',
   styleUrl: './variables-and-scope.page.css',
