@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --code-color: #bcbec4;
+  --code-background: #1e1f22;
   --function-color: #57aaf7;
   --comment-color: #7a7e85;
   --dcdoc-tag-color: #67a37c;
@@ -61,7 +62,7 @@ pre {
   border-radius: 10px;
   padding: 10px;
   font-family: Consolas, 'Courier New', Courier, monospace;
-  background: #1e1f22;
+  background: var(--code-background);
   color: var(--code-color);
 }
 
