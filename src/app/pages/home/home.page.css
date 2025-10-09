@@ -44,9 +44,7 @@ ul {
 }
 
 pre {
-  background: #f4f4f4;
-  padding: 1rem;
-  border-radius: 6px;
+  margin: auto;
   text-align: left;
-  overflow-x: auto;
+  width: fit-content;
 }

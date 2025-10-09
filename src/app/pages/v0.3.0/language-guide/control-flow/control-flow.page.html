@@ -10,15 +10,15 @@
 
 <if/> (a > <number>10</number>)
 &#123;
-    <function>print_line</function>(<string>Greater than 10</string>);
+    <print_line/>(<string>Greater than 10</string>);
 &#125;
 <else/> <if/> (a == <number>10</number>)
 &#123;
-    <function>print_line</function>(<string>Equal to 10</string>);
+    <print_line/>(<string>Equal to 10</string>);
 &#125;
 <else/>
 &#123;
-    <function>print_line</function>(<string>Less than 10</string>);
+    <print_line/>(<string>Less than 10</string>);
 &#125;
 </pre>
 
@@ -29,7 +29,7 @@
 
 <while/> (i < <number>5</number>)
 &#123;
-    <function>print_line</function>(i);
+    <print_line/>(i);
     i++;
 &#125;
 </pre>
@@ -39,7 +39,7 @@ A <code>for</code> loop is useful when you know how many times you want to run s
 <pre>
 <for/> (<int/> i = <number>0</number>; i < <number>5</number>; i++)
 &#123;
-    <function>print_line</function>(i);
+    <print_line/>(i);
 &#125;
 </pre>
 <p>You can also omit parts of the loop if not needed:</p>
@@ -47,7 +47,7 @@ A <code>for</code> loop is useful when you know how many times you want to run s
 <int/> i = <number>0</number>;
 <for/> (; i < <number>5</number>;)
 &#123;
-    <function>print_line</function>(i);
+    <print_line/>(i);
     i++;
 &#125;
 </pre>
@@ -59,7 +59,7 @@ A <code>for</code> loop is useful when you know how many times you want to run s
 &#123;
     <if/> (i == <number>5</number>) <break/>;        <comment>// stop the loop</comment>
     <if/> (i % <number>2</number> == <number>0</number>) <continue/>; <comment>// skip even numbers</comment>
-    <function>print_line</function>(i);
+    <print_line/>(i);
 &#125;
 </pre>
 
@@ -69,7 +69,7 @@ A <code>for</code> loop is useful when you know how many times you want to run s
 <pre>
 <if/> (has_error)
 &#123;
-    <function>print_error</function>(<string>Something went wrong!</string>);
+    <print_error/>(<string>Something went wrong!</string>);
     <exit/> 1;
 &#125;
 </pre>

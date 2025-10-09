@@ -27,6 +27,9 @@ import {IfComponent} from '../../../../components/code/keyword/if/if.component';
 import {
   FloatComponent
 } from '../../../../components/code/keyword/float/float.component';
+import {
+  PrintLineComponent
+} from '../../../../components/code/function/print-line/print-line.component';
 
 @Component({
   selector: 'app-functions',
@@ -41,6 +44,7 @@ import {
     ReturnComponent,
     IfComponent,
     FloatComponent,
+    PrintLineComponent,
   ],
   templateUrl: './functions.page.html',
   styleUrl: './functions.page.css',
