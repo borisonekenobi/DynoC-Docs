@@ -45,12 +45,12 @@ x = <string>Hello Mom!</string>; <comment>// invalid (type mismatch)</comment>
     <if/> (a > <number>5</number>)
     &#123;
         <int/> b = <number>20</number>;
-        <function>print_line</function>(a); <comment>// OK</comment>
-        <function>print_line</function>(b); <comment>// OK</comment>
+        <print_line/>(a); <comment>// OK</comment>
+        <print_line/>(b); <comment>// OK</comment>
     &#125;
 
-    <function>print_line</function>(a); <comment>// OK</comment>
-    <function>print_line</function>(b); <comment>// Error: b is out of scope</comment>
+    <print_line/>(a); <comment>// OK</comment>
+    <print_line/>(b); <comment>// Error: b is out of scope</comment>
 &#125;
 </pre>
 <p>When the inner block ends, <code>b</code> is destroyed and cannot be used outside it.</p>
@@ -63,7 +63,7 @@ x = <string>Hello Mom!</string>; <comment>// invalid (type mismatch)</comment>
 
 <void/> <function>show_version</function>()
 &#123;
-    <function>print_line</function>(version); <comment>// accessible here</comment>
+    <print_line/>(version); <comment>// accessible here</comment>
 &#125;
 </pre>
 <p>Global variables remain in memory for the entire program lifetime.</p>
@@ -76,6 +76,6 @@ x = <string>Hello Mom!</string>; <comment>// invalid (type mismatch)</comment>
 <void/> <function>test</function>()
 &#123;
   <int/> value = <number>5</number>; <comment>// Error: 'value' already exists</comment>
-  <function>print_line</function>(value);
+  <print_line/>(value);
 &#125;
 </pre>

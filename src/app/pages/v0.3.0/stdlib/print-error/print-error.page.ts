@@ -1,12 +1,13 @@
 import {Component} from '@angular/core';
 import {
-  FunctionComponent,
-} from '../../../../components/code/function/function.component';
+  PrintErrorComponent
+} from '../../../../components/code/function/print-error/print-error.component';
 
 @Component({
   selector: 'app-print-error',
   imports: [
-    FunctionComponent],
+    PrintErrorComponent,
+  ],
   templateUrl: './print-error.page.html',
   styleUrl: './print-error.page.css',
 })

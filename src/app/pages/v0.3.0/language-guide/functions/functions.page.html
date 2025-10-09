@@ -9,7 +9,7 @@
 <pre>
 <void/> <function>greet</function>()
 &#123;
-    <function>print_line</function>(<string>Hello from DynoC!</string>);
+    <print_line/>(<string>Hello from DynoC!</string>);
 &#125;
 </pre>
 <p>Function definitions can appear anywhere in the source file, outside of other functions, but they must be defined
@@ -24,7 +24,7 @@
 <pre>
 <void/> <function>greet_user</function>(<string-kw/> name)
 &#123;
-    <function>print_line</function>(<string>Hello</string> + name + <string>!</string>);
+    <print_line/>(<string>Hello</string> + name + <string>!</string>);
 &#125;
 
 <function>greet_user</function>(<string>Boris</string>);
@@ -37,7 +37,7 @@
 <void/> <function>add</function>(<int/> a, <int/> b)
 &#123;
     <int/> sum = a + b;
-    <function>print_line</function>(sum);
+    <print_line/>(sum);
 &#125;
 </pre>
 <p>You can pass expressions or variables as arguments:</p>
@@ -57,7 +57,7 @@
 &#125;
 
 <int/> result = <function>multiply</function>(<number>4</number>, <number>5</number>);
-<function>print_line</function>(result); <comment>// 20</comment>
+<print_line/>(result); <comment>// 20</comment>
 </pre>
 
 <h3>Void Functions</h3>
@@ -66,7 +66,7 @@
 <pre>
 <void/> <function>log_error</function>(<string-kw/> msg)
 &#123;
-    <function>print_line</function>(<string>Error: </string> + msg);
+    <print_line/>(<string>Error: </string> + msg);
 &#125;
 </pre>
 
@@ -80,7 +80,7 @@
     <return/> n * <function>factorial</function>(n - <number>1</number>);
 &#125;
 
-<function>print_line</function>(<function>factorial</function>(<number>5</number>)); <comment>// 120</comment>
+<print_line/>(<function>factorial</function>(<number>5</number>)); <comment>// 120</comment>
 </pre>
 
 <h3>Function Overloading</h3>
@@ -102,8 +102,8 @@
     <return/> a + b + c;
 &#125;
 
-<function>print_line</function>(<function>add</function>(<number>2</number>, <number>3</number>));     <comment>// calls add(int, int)</comment>
-<function>print_line</function>(<function>add</function>(<number>2.5</number>, <number>3.1</number>)); <comment>// calls add(float, float)</comment>
-<function>print_line</function>(<function>add</function>(<number>1</number>, <number>2</number>, <number>3</number>));  <comment>// calls add(int, int, int)</comment>
+<print_line/>(<function>add</function>(<number>2</number>, <number>3</number>));     <comment>// calls add(int, int)</comment>
+<print_line/>(<function>add</function>(<number>2.5</number>, <number>3.1</number>)); <comment>// calls add(float, float)</comment>
+<print_line/>(<function>add</function>(<number>1</number>, <number>2</number>, <number>3</number>));  <comment>// calls add(int, int, int)</comment>
 </pre>
 <p>The correct function version is chosen based on the number and types of arguments passed.</p>

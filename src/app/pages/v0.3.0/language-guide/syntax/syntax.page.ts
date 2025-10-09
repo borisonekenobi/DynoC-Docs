@@ -46,6 +46,18 @@ import {
 import {
   WhileComponent
 } from '../../../../components/code/keyword/while/while.component';
+import {
+  PrintLineComponent
+} from '../../../../components/code/function/print-line/print-line.component';
+import {
+  PrintComponent
+} from '../../../../components/code/function/print/print.component';
+import {
+  PrintErrorComponent
+} from '../../../../components/code/function/print-error/print-error.component';
+import {
+  InputComponent
+} from '../../../../components/code/function/input/input.component';
 
 @Component({
   selector: 'app-syntax',
@@ -69,7 +81,12 @@ import {
     CharKWComponent,
     VoidComponent,
     ForComponent,
-    WhileComponent],
+    WhileComponent,
+    PrintLineComponent,
+    PrintComponent,
+    PrintErrorComponent,
+    InputComponent,
+  ],
   templateUrl: './syntax.page.html',
   styleUrl: './syntax.page.css',
 })

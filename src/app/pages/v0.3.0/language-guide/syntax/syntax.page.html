@@ -5,17 +5,17 @@
 <p>A DynoC program is a collection of statements and function definitions.</p>
 <p>Each statement ends with a semicolon (<code>;</code>).</p>
 <pre>
-<function>print_line</function>(<string>Hello, DynoC!</string>);
+<print_line/>(<string>Hello, DynoC!</string>);
 </pre>
 <p>Blocks of code use curly braces <code>&#123;&#125;</code>, just like in C-style languages.</p>
 <pre>
 <if/> (x > <number>0</number>)
 &#123;
-    <function>print_line</function>(<string>Positive</string>);
+    <print_line/>(<string>Positive</string>);
 &#125;
 <else/>
 &#123;
-    <function>print_line</function>(<string>Negative</string>);
+    <print_line/>(<string>Negative</string>);
 &#125;
 </pre>
 
@@ -143,7 +143,7 @@ age = 22;
 <p>You can concatenate them with <code>+</code>.</p>
 <pre>
 <string-kw/> greeting = <string>Hello, </string> + <string>World!</string>;
-<function>print_line</function>(greeting);
+<print_line/>(greeting);
 </pre>
 <p>Characters use single quotes:</p>
 <pre>
@@ -154,7 +154,7 @@ age = 22;
 <p>Arrays hold multiple values of a specified type.</p>
 <pre>
 <int/>[] numbers = [<number>1</number>, <number>2</number>, <number>3</number>, <number>4</number>];
-<function>print_line</function>(numbers[<number>0</number>]); <comment>// Output: 1</comment>
+<print_line/>(numbers[<number>0</number>]); <comment>// Output: 1</comment>
 </pre>
 <p>Arrays can be nested.</p>
 <pre>
@@ -176,7 +176,7 @@ age = 22;
 <pre>
 <void/> <function>greet</function>(<string-kw/> name)
 &#123;
-    <function>print_line</function>(<string>Hello, </string>, name);
+    <print_line/>(<string>Hello, </string>, name);
 &#125;
 </pre>
 <p>And are called with arguments.</p>
@@ -196,20 +196,20 @@ age = 22;
 <pre>
 <if/> (x > <number>0</number>)
 &#123;
-    <function>print_line</function>(<string>Positive</string>);
+    <print_line/>(<string>Positive</string>);
 &#125;
 <else/> <if/> (x < <number>0</number>)
 &#123;
-    <function>print_line</function>(<string>Negative</string>);
+    <print_line/>(<string>Negative</string>);
 &#125;
 <else/>
 &#123;
-    <function>print_line</function>(<string>Zero</string>);
+    <print_line/>(<string>Zero</string>);
 &#125;
 
 <for/> (<var-kw/> i = <number>0</number>; i < <number>5</number>; i++)
 &#123;
-    <function>print_line</function>(i);
+    <print_line/>(i);
 &#125;
 
 <while/> (<comment>/* condition */</comment>)
@@ -221,13 +221,13 @@ age = 22;
 <h3>Input & Output</h3>
 <p>Printing functions:</p>
 <pre>
-<function>print</function>(<string>Hello </string>);       <comment>// No newline</comment>
-<function>print_line</function>(<string>World!</string>);  <comment>// Adds newline</comment>
-<function>print_error</function>(<string>Error!</string>); <comment>// Prints to stderr</comment>
+<print/>(<string>Hello </string>);       <comment>// No newline</comment>
+<print_line/>(<string>World!</string>);  <comment>// Adds newline</comment>
+<print_error/>(<string>Error!</string>); <comment>// Prints to stderr</comment>
 </pre>
 <p>Input function:</p>
 <pre>
-<string-kw/> name = <function>input</function>(<string>Enter name: </string>);
+<string-kw/> name = <input-fn/>(<string>Enter name: </string>);
 </pre>
 
 <h3>Example Program:</h3>
@@ -241,7 +241,7 @@ age = 22;
     <return/> <function>fibonacci</function>(n - <number>1</number>) + <function>fibonacci</function>(n - <number>2</number>);
 &#125;
 
-<function>print_line</function>(<string>The 5th Fibonacci number is </string>, <function>fibonacci</function>(<number>5</number>));
+<print_line/>(<string>The 5th Fibonacci number is </string>, <function>fibonacci</function>(<number>5</number>));
 </pre>
 <p>Output:</p>
 <pre>

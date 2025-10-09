@@ -1,12 +1,13 @@
 import {Component} from '@angular/core';
 import {
-  FunctionComponent,
-} from '../../../../components/code/function/function.component';
+  InputComponent
+} from '../../../../components/code/function/input/input.component';
 
 @Component({
   selector: 'app-input',
   imports: [
-    FunctionComponent],
+    InputComponent,
+  ],
   templateUrl: './input.page.html',
   styleUrl: './input.page.css',
 })
