@@ -21,12 +21,158 @@
   </ul>
 
   <h2>Example</h2>
-  <pre>
-<for/> (<int/> i = <number>0</number>; i &lt; <number>5</number>; i++)
+  <div class="examples-container">
+    <button id="prev" class="arrow" (click)="prev()"><</button>
+    <div id="code-examples">
+      <div>
+        <p class="example-title">hello_world.dc</p>
+        <pre>
+<print_line/>(<string>Hello, World!</string>);
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">basic_arithmetic.dc</p>
+        <pre>
+<var-kw/> a = <number>10</number>;
+<var-kw/> b = <number>3</number>;
+<print_line/>(<string>a + b = </string>, a + b);
+<print_line/>(<string>a / b = </string>, a / b);
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">if_else.dc</p>
+        <pre>
+<var-kw/> num = <number>7</number>;
+<if/> (num % <number>2</number> == <number>0</number>)
+&#123;
+    <print_line/>(<string>Even</string>);
+&#125;
+<else/>
+&#123;
+    <print_line/>(<string>Odd</string>);
+&#125;
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">simple_loop.dc</p>
+        <pre>
+<for/> (<var-kw/> i = <number>1</number>; i <= <number>5</number>; i++)
 &#123;
     <print_line/>(<string>Count: </string>, i);
 &#125;
 </pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">factorial.dc</p>
+        <pre>
+<int/> <function>factorial</function>(n)
+&#123;
+    <if/> (n <= <number>1</number>) <return/> <number>1</number>;
+    <return/> n * <function>factorial</function>(n - <number>1</number>);
+&#125;
+
+<print_line/>(<string>Factorial of 5 is </string>, <function>factorial</function>(<number>5</number>));
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">average_of_array.dc</p>
+        <pre>
+<float/> <function>average</function>(<int/>[] arr)
+&#123;
+    <float/> sum = <number>0</number>;
+    <for/> (<var-kw/> i = <number>0</number>; i < arr.length; i++)
+    &#123;
+        sum = sum + arr[i];
+    &#125;
+    <return/> sum / arr.length;
+&#125;
+
+<var-kw/> nums = [<number>5</number>, <number>10</number>, <number>15</number>, <number>20</number>];
+<print_line/>(<string>Average: </string>, <function>average</function>(nums));
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">fibonacci_sequence.dc</p>
+        <pre>
+<int/> <function>fib</function>(n)
+&#123;
+    <if/> (n <= <number>1</number>) <return/> <number>0</number>;
+    <if/> (n == <number>2</number>) <return/> <number>1</number>;
+    <return/> <function>fib</function>(n - <number>1</number>) + <function>fib</function>(n - <number>2</number>);
+&#125;
+
+<for/> (<var-kw/> i = <number>0</number>; i < <number>10</number>; i++)
+&#123;
+    <print/>(<function>fib</function>(i), <string> </string>);
+&#125;
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">input.dc</p>
+        <pre>
+<string-kw/> name = <input-fn/>(<string>Enter your name: </string>);
+<print_line/>(<string>Welcome, </string>, name);
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">array_manipulation.dc</p>
+        <pre>
+<var-kw/> arr = [<number>1</number>, <number>2</number>, <number>3</number>];
+arr[<number>1</number>] = <number>99</number>;
+<print_line/>(<string>Array: </string>, arr);
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">find_max_value.dc</p>
+        <pre>
+<int/> <function>max_of</function>(<int/>[] arr)
+&#123;
+    <var-kw/> max = arr[<number>0</number>];
+    <for/> (<var-kw/> i = <number>1</number>; i < arr.length; i++)
+    &#123;
+        <if/> (arr[i] > max) max = arr[i];
+    &#125;
+    <return/> max;
+&#125;
+
+<print_line/>(<function>max_of</function>([<number>3</number>, <number>8</number>, <number>2</number>, <number>5</number>]));
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">multiplication_tables.dc</p>
+        <pre>
+<void/> <function>table</function>(<int/> n)
+&#123;
+    <for/> (<var-kw/> i = <number>1</number>; i <= <number>10</number>; i++)
+    &#123;
+        <print_line/>(n, <string>×</string>, i, <string>=</string>, n * i);
+    &#125;
+&#125;
+
+<function>table</function>(<number>5</number>);
+</pre>
+      </div>
+      <div class="hidden">
+        <p class="example-title">sum_of_digits.dc</p>
+        <pre>
+<int/> <function>sum_digits</function>(<int/> num)
+&#123;
+    <var-kw/> total = <number>0</number>;
+    <while/> (num > <number>0</number>)
+    &#123;
+        total = total + (num % <number>10</number>);
+        num = num / <number>10</number>;
+    &#125;
+
+    <return/> total;
+&#125;
+
+<print_line/>(<function>sum_digits</function>(<number>12345</number>)); <comment>// 15</comment>
+</pre>
+      </div>
+    </div>
+    <button id="next" class="arrow" (click)="next()">></button>
+  </div>
 
   <div class="note.info">
     <p>
