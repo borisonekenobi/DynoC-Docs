@@ -3,6 +3,13 @@
 <p>It optionally displays a prompt before waiting for user input.</p>
 <p>The input is always returned as a string.</p>
 
+<div class="note-box note-warning">
+  <strong>Warning:</strong> The <code>input()</code> function does not handle multi-line paste correctly.
+  If multiple lines are pasted into the terminal, they are treated as a single input instead of being split.
+  Please see <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/12" target="_blank">
+  the GitHub Issues page</a> for more details.
+</div>
+
 <h3>Syntax</h3>
 <pre>
 <input-fn/>();
