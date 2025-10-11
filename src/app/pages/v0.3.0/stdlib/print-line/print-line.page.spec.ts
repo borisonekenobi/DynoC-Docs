@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {PrintLinePage} from './print-line.page';
+import {provideRouter} from '@angular/router';
 
 describe('PrintLinePage', () => {
   let component: PrintLinePage;
@@ -8,7 +9,7 @@ describe('PrintLinePage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PrintLinePage],
+      imports: [PrintLinePage], providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PrintLinePage);
