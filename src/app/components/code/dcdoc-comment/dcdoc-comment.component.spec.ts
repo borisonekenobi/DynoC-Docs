@@ -14,6 +14,14 @@ describe('DCDocCommentComponent', () => {
 
     fixture = TestBed.createComponent(DCDocCommentComponent);
     component = fixture.componentInstance;
+    component.info = {
+      description: 'Test description',
+      params: [
+        { name: 'param1', description: 'Param 1 description' },
+        { name: 'param2', description: 'Param 2 description' },
+      ],
+      returns: 'Test return value',
+    };
     fixture.detectChanges();
   });
 
