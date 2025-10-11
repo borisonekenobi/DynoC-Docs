@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SyntaxPage} from './syntax.page';
+import {provideRouter} from '@angular/router';
 
 describe('SyntaxPage', () => {
   let component: SyntaxPage;
@@ -8,7 +9,7 @@ describe('SyntaxPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SyntaxPage],
+      imports: [SyntaxPage], providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SyntaxPage);

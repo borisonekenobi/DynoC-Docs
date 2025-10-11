@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {InputPage} from './input.page';
+import {provideRouter} from '@angular/router';
 
 describe('InputPage', () => {
   let component: InputPage;
@@ -8,7 +9,7 @@ describe('InputPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InputPage],
+      imports: [InputPage], providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(InputPage);

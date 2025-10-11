@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { WrongRouteComponent } from './wrong-route.component';
+import {WrongRouteComponent} from './wrong-route.component';
+import {provideRouter} from '@angular/router';
 
 describe('WrongRouteComponent', () => {
   let component: WrongRouteComponent;
@@ -8,9 +9,8 @@ describe('WrongRouteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WrongRouteComponent]
-    })
-    .compileComponents();
+      imports: [WrongRouteComponent], providers: [provideRouter([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WrongRouteComponent);
     component = fixture.componentInstance;
