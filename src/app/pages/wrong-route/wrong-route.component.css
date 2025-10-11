@@ -1,0 +1,10 @@
+.container {
+  margin: 30px;
+}
+
+img {
+  margin: auto auto;
+  display: block;
+  width: auto;
+  height: 50vh;
+}
