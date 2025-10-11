@@ -58,6 +58,7 @@ import {
 import {
   InputComponent
 } from '../../../../components/code/function/input/input.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-syntax',
@@ -86,6 +87,7 @@ import {
     PrintComponent,
     PrintErrorComponent,
     InputComponent,
+    RouterLink,
   ],
   templateUrl: './syntax.page.html',
   styleUrl: './syntax.page.css',
