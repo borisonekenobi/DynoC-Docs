@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { V0_3_0Page } from './v0_3_0-page';
+import {V0_3_0Page} from './v0_3_0-page';
+import {provideRouter} from '@angular/router';
 
 describe('V030Page', () => {
   let component: V0_3_0Page;
@@ -8,9 +9,8 @@ describe('V030Page', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [V0_3_0Page]
-    })
-    .compileComponents();
+      imports: [V0_3_0Page], providers: [provideRouter([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(V0_3_0Page);
     component = fixture.componentInstance;
