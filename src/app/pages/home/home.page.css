@@ -95,8 +95,45 @@ pre {
   border-radius: 0;
   text-align: left;
   width: 500px;
+  overflow-x: scroll;
 }
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 0 0.5rem;
+  }
+
+  .actions .btn {
+    display: block;
+    margin: 0.5rem auto;
+  }
+
+  div .examples-container {
+    grid-template-columns: auto;
+    width: fit-content;
+  }
+
+  #prev {
+    border-radius: 10px;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-right: none;
+    border-bottom: 1px solid var(--code-color);
+  }
+
+  #next {
+    border-radius: 10px;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-left: none;
+    border-top: 1px solid var(--code-color);
+  }
+
+  pre {
+    width: 300px;
+  }
 }
