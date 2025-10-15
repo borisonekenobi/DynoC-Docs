@@ -369,7 +369,7 @@ A `),c(79,"code"),i(80,"for"),a(),i(81,` loop is useful when you know how many t
 }
 `),a(),c(68,"h2"),i(69,"Functions"),a(),c(70,"pre"),p(71,"int"),i(72," "),c(73,"function"),i(74,"square"),a(),i(75,"("),p(76,"int"),i(77,` n)
 {
-    `),p(78,"return"),i(79,` n * n
+    `),p(78,"return"),i(79,` n * n;
 }
 
 `),p(80,"print_line"),i(81,"("),c(82,"string"),i(83,"Square of 4: "),a(),i(84,", square("),c(85,"number"),i(86,"4"),a(),i(87,`));
