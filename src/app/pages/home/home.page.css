@@ -95,7 +95,7 @@ pre {
   border-radius: 0;
   text-align: left;
   width: 500px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .hidden {
@@ -135,5 +135,6 @@ pre {
 
   pre {
     width: 300px;
+    overflow-x: auto;
   }
 }
