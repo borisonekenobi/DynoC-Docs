@@ -1,11 +1,7 @@
-# Allow all well-behaved crawlers full access to the public site
 User-agent: *
 Allow: /
 
-# Disallow Angular and build-specific assets that should not be indexed
-Disallow: /assets/
 Disallow: /404
 Disallow: /wrong-route
 
-# Point crawlers to the sitemap for structured discovery
 Sitemap: https://borisonekenobi.github.io/DynoC-Docs/sitemap.xml
