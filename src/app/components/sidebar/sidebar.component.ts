@@ -19,6 +19,6 @@ export class SidebarComponent {
 
   versionChange() {
     const versionElem = document.getElementById('version') as HTMLSelectElement;
-    window.location.href = `/documentation/${versionElem.value}`;
+    window.location.href = `/DynoC-Docs/documentation/${versionElem.value}`;
   }
 }
