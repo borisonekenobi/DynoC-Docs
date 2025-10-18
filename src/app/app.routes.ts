@@ -6,9 +6,7 @@ import {V0_3_1Page} from './pages/v0.3.1/v0_3_1-page';
 import {V0_3_0Page} from './pages/v0.3.0/v0_3_0-page';
 import {ExamplesPage} from './pages/examples/examples.page';
 import {ContributingPage} from './pages/contributing/contributing.page';
-import {
-  WrongRouteComponent,
-} from './pages/wrong-route/wrong-route.component';
+import {WrongRouteComponent} from './pages/wrong-route/wrong-route.component';
 
 export const routes: Routes = [
   {path: '', component: HomePage},
