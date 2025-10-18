@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /404
+Disallow: /wrong-route
+
+Sitemap: https://borisonekenobi.github.io/DynoC-Docs/sitemap.xml
