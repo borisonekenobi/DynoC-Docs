@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {SidebarElement} from '../../../sidebar-element';
 
 @Component({
@@ -13,12 +13,18 @@ export class SidebarComponent {
   @Input({required: true}) version!: string;
   @Input({required: true}) layout!: SidebarElement[];
   versions: string[] = [
-    '0.3.1',
-    '0.3.0'
-  ];
+    '0.3.1', '0.3.0'];
+
+  constructor(private router: Router) {
+  }
 
   versionChange() {
     const versionElem = document.getElementById('version') as HTMLSelectElement;
-    window.location.href = `/DynoC-Docs/documentation/${versionElem.value}`;
+    this.router.navigate([`/documentation/${versionElem.value}`]).
+      then(r => {
+        if (!r) {
+          console.error('Navigation to selected version failed!');
+        }
+      });
   }
 }
