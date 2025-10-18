@@ -4,7 +4,6 @@ Allow: /
 
 # Disallow Angular and build-specific assets that should not be indexed
 Disallow: /assets/
-Disallow: /favicon.ico
 Disallow: /404
 Disallow: /wrong-route
 
