@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ES2022",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist/sitemap",
+    "baseUrl": "./src"
+  },
+  "include": [
+    ".github/scripts/sitemap.ts",
+    "src/app/**/*.ts"
+  ]
+}
