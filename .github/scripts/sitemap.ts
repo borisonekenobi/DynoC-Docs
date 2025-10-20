@@ -11,7 +11,7 @@ import {Route} from '@angular/router';
 const INITIAL_PATH: string = 'https://borisonekenobi.github.io/DynoC-Docs/';
 
 function getUrlTags(route: Route, prefix: string): string[] {
-  if (route.path == '' || route.path == '**') return [];
+  if (route.path === '' || route.path === '**') return [];
 
   const path: string = `${prefix}${route.path}/`;
   let paths: string[] = [path];
