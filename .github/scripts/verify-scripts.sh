@@ -1,5 +1,5 @@
 missing=""
-for script in start build deploy test; do
+for script in start build deploy sitemap test; do
   if ! jq -e --arg s "$script" '.scripts[$s]' package.json > /dev/null; then
     missing="$missing $script"
   fi
