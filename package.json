@@ -8,7 +8,7 @@
     "deploy": "ng deploy --repo --base-href=/DynoC-Docs/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "sitemap": "npx ts-node -P tsconfig.sitemap.json .github/scripts/sitemap.ts"
+    "sitemap": "npx angular-sitemap-generator https://borisonekenobi.github.io/DynoC-Docs"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "^20.3.6",
     "@angular/platform-browser-dynamic": "^20.3.6",
     "@angular/router": "^20.3.6",
+    "angular-sitemap-generator": "^1.0.1",
     "rxjs": "~7.8.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
