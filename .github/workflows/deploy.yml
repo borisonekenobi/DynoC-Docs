@@ -9,7 +9,21 @@ permissions:
   contents: write
 
 jobs:
-  call-common-workflow:
-    uses: ./.github/workflows/common.yml
-    with:
-      run-deploy: true
+  verify-scripts:
+    uses: ./.github/workflows/verify-scripts.yml
+
+  test:
+    needs: verify-scripts
+    uses: ./.github/workflows/run-tests.yml
+
+  build:
+    needs: verify-scripts
+    uses: ./.github/workflows/build-project.yml
+
+  sitemap:
+    needs: verify-scripts
+    uses: ./.github/workflows/create-sitemap.yml
+
+  deploy:
+    needs: [test, build, sitemap]
+    uses: ./.github/workflows/deploy-project.yml

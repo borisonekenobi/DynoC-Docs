@@ -1,0 +1,16 @@
+name: create-sitemap.yml
+
+on: workflow_call
+
+jobs:
+  sitemap:
+    name: Create Sitemap
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run sitemap
