@@ -8,7 +8,7 @@
     "deploy": "ng deploy --repo --base-href=/DynoC-Docs/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "sitemap": "npx angular-sitemap-generator https://borisonekenobi.github.io/DynoC-Docs"
+    "sitemap": "npx angular-sitemap-generator https://borisonekenobi.github.io/DynoC-Docs -c"
   },
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
     "@angular/compiler-cli": "^20.3.6",
     "@types/jasmine": "~5.1.12",
     "angular-cli-ghpages": "^2.0.3",
-    "angular-sitemap-generator": "^2.0.1",
+    "angular-sitemap-generator": "^3.0.0",
     "jasmine-core": "~5.12.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
