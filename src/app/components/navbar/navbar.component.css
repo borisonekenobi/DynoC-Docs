@@ -50,16 +50,14 @@
 
 .navbar a:hover {
   font-weight: bolder;
-  color: #ccc;
+  color: #fff;
   text-shadow: 0 0 6px rgba(204, 204, 204, 0.6);
 }
 
 .navbar a.active {
   font-weight: bold;
-  color: #ccc;
-  text-decoration: underline;
+  color: #fff;
 }
-
 
 /* for small devices */
 @media (max-width: 600px) {
