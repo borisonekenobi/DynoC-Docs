@@ -2,7 +2,7 @@
   <app-sidebar [version]="this.version" [layout]="this.sidebarLayout"></app-sidebar>
 
   <section class="guide-content">
-    @if (this.available) {
+    @if (this.released) {
       <router-outlet></router-outlet>
     } @else {
       <p>Still working on it! Check <a href="https://github.com/borisonekenobi/DynoC-Docs/releases" target="_blank">the
