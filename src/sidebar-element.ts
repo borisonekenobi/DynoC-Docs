@@ -13,6 +13,7 @@ export interface SidebarRedirect extends SidebarElement {
 export interface SidebarLink extends Route {
   name: string;
   path: string;
+  title: string;
   component: Type<any>;
   children: SidebarElement[];
 }
