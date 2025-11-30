@@ -12,8 +12,7 @@ import {SidebarElement} from '../../../sidebar-element';
 export class SidebarComponent {
   @Input({required: true}) version!: string;
   @Input({required: true}) layout!: SidebarElement[];
-  versions: string[] = [
-    '0.3.1', '0.3.0'];
+  versions: string[] = ['0.3.16', '0.3.0'];
 
   constructor(private router: Router) {
   }

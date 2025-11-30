@@ -31,64 +31,86 @@ export class V0_3_0Page extends Version {
     {path: '', redirectTo: 'language-guide', pathMatch: 'full'}, {
       name: 'Language Guide',
       path: 'language-guide',
+      title: 'Language Guide | DynoC v0.3.0 Documentation',
       component: LanguageGuidePage,
       children: [
         {path: '', redirectTo: 'syntax', pathMatch: 'full'} as SidebarRedirect,
         {
           name: 'Syntax Overview',
           path: 'syntax',
+          title: 'Syntax Overview | DynoC v0.3.0 Documentation',
           component: SyntaxPage,
           children: [],
         } as SidebarLink,
         {
-          name: 'Types', path: 'types', component: TypesPage, children: [],
+          name: 'Types',
+          path: 'types',
+          title: 'Types | DynoC v0.3.0 Documentation',
+          component: TypesPage,
+          children: [],
         } as SidebarLink,
         {
           name: 'Variables & Scope',
           path: 'variables-and-scope',
+          title: 'Variables & Scope | DynoC v0.3.0 Documentation',
           component: VariablesAndScopePage,
           children: [],
         } as SidebarLink,
         {
           name: 'Functions',
           path: 'functions',
+          title: 'Functions | DynoC v0.3.0 Documentation',
           component: FunctionsPage,
           children: [],
         } as SidebarLink,
         {
           name: 'Control Flow',
           path: 'control-flow',
+          title: 'Control Flow | DynoC v0.3.0 Documentation',
           component: ControlFlowPage,
           children: [],
         } as SidebarLink,
         {
           name: 'Operators',
           path: 'operators',
+          title: 'Operators | DynoC v0.3.0 Documentation',
           component: OperatorsPage,
           children: [],
         } as SidebarLink],
     } as SidebarLink, {
       name: 'Standard Library',
       path: 'standard-library',
+      title: 'Standard Library | DynoC v0.3.0 Documentation',
       component: StdlibPage,
       children: [
-        {path: '', redirectTo: 'print', pathMatch: 'full'} as SidebarRedirect, {
-          name: 'print()', path: 'print', component: PrintPage, children: [],
+        {path: '', redirectTo: 'print', pathMatch: 'full'} as SidebarRedirect,
+        {
+          name: 'print()',
+          path: 'print',
+          title: 'print() | DynoC v0.3.0 Documentation',
+          component: PrintPage,
+          children: [],
         } as SidebarLink, {
           name: 'print_line()',
           path: 'print_line',
+          title: 'print_line() | DynoC v0.3.0 Documentation',
           component: PrintLinePage,
           children: [],
         } as SidebarLink, {
           name: 'print_error()',
           path: 'print_error',
+          title: 'print_error() | DynoC v0.3.0 Documentation',
           component: PrintErrorPage,
           children: [],
         } as SidebarLink, {
-          name: 'input()', path: 'input', component: InputPage, children: [],
+          name: 'input()',
+          path: 'input',
+          title: 'input() | DynoC v0.3.0 Documentation',
+          component: InputPage,
+          children: [],
         } as SidebarLink],
     } as SidebarLink];
-  override available: boolean = true;
+  override released: boolean = true;
   override version: string = '0.3.0';
   override sidebarLayout: SidebarElement[] = V0_3_0Page.sidebarLayout;
 }
