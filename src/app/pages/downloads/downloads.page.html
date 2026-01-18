@@ -8,7 +8,7 @@
           <img alt="Download Icon" class="download-icon" src="download.svg"/>
           <p class="asset">Download</p>
         </a>
-        @if (this.newestRelease && !this.newestRelease?.dc_included) {
+        @if (this.newestRelease && !this.newestRelease.dc_included) {
           <div class="note-box note-info">
             <strong>Info:</strong> This release does not include the Package Manager.
             Please see <a href="https://github.com/borisonekenobi/DynoC-Package-Manager" target="_blank">
