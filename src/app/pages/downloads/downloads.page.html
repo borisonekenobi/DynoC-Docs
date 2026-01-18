@@ -1,0 +1,47 @@
+<div class="standalone-page">
+  <div class="newest">
+    <h2>{{ this.newestRelease?.name }}</h2>
+    <div class="release-container">
+      <div class="left-container" id="description"></div>
+      <div class="right-container">
+        <a [class]="this.bestAsset ? '' : 'disabled'" [href]="this.bestAsset?.url" class="best-asset" download>
+          <img alt="Download Icon" class="download-icon" src="download.svg"/>
+          <p class="asset">Download</p>
+        </a>
+        @if (this.newestRelease && !this.newestRelease?.dc_included) {
+          <div class="note-box note-info">
+            <strong>Info:</strong> This release does not include the Package Manager.
+            Please see <a href="https://github.com/borisonekenobi/DynoC-Package-Manager" target="_blank">
+            the GitHub page</a> for more details.
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="releases">
+    <h2>All Releases</h2>
+    <table>
+      <tr class="header-row">
+        <th class="header-elem">Release Name</th>
+        <th class="header-elem">Package Manager Included</th>
+        <th class="header-elem">Released On</th>
+        <th class="header-elem">Downloads</th>
+      </tr>
+      @for (release of this.releases; track release) {
+        <tr class="download-container">
+          <td>{{ release.name }}</td>
+          <td>{{ release.dc_included ? 'Yes' : 'No' }}</td>
+          <td>{{ this.formatDate(release.published_at!) }}</td>
+          <td class="assets-container">
+            @for (asset of release.assets; track asset) {
+              <a [href]="asset.browser_download_url" class="asset-container" download>
+                <img alt="Download Icon" class="download-icon" src="download.svg"/>
+                <p class="asset">{{ asset.name }}</p>
+              </a>
+            }
+          </td>
+        </tr>
+      }
+    </table>
+  </div>
+</div>

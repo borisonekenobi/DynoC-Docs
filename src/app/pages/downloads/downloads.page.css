@@ -1,0 +1,95 @@
+.release-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: lightgray solid 1px;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  gap: 12px;
+}
+
+.best-asset {
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #e3a400;
+  border-radius: 8px;
+  background-color: #ffd009;
+  gap: 12px;
+}
+
+.best-asset:hover {
+  background-color: #edb405;
+}
+
+.best-asset.disabled {
+  pointer-events: none;
+  color: darkgray;
+  border-color: dimgray;
+  background-color: gray;
+}
+
+.best-asset p {
+  font-weight: bolder;
+  margin: 0;
+  color: white;
+}
+
+.best-asset.disabled p {
+  font-weight: bolder;
+  margin: 0;
+  color: darkgray;
+}
+
+.download-container {
+  padding: 16px;
+  border-top: lightgray solid 1px;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+}
+
+.assets-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 auto 0 auto;
+  border: none;
+  gap: 0;
+}
+
+.asset-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.asset {
+  margin: 0;
+}
+
+.disabled {
+  cursor: default;
+  text-decoration: none;
+  pointer-events: none;
+  color: black;
+}
