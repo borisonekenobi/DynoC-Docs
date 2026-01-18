@@ -2,78 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/getting-started/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.16/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/syntax/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/types/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/variables-and-scope/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/functions/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/control-flow/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/language-guide/operators/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/standard-library/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/standard-library/print/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/standard-library/print_line/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/standard-library/print_error/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/documentation/0.3.0/standard-library/input/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://borisonekenobi.github.io/DynoC-Docs/downloads/</loc>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/examples/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
   <url>
     <loc>https://borisonekenobi.github.io/DynoC-Docs/contributing/</loc>
-    <lastmod>2025-11-30T16:09:10.171Z</lastmod>
+    <lastmod>2026-01-18T01:00:18.568Z</lastmod>
   </url>
 </urlset>
