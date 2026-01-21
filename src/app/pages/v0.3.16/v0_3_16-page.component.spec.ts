@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {provideRouter} from '@angular/router';
 
 import { V0_3_16Page } from './v0_3_16-page.component';
 
@@ -8,7 +9,8 @@ describe('V031Page', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [V0_3_16Page]
+      imports: [V0_3_16Page],
+      providers: [provideRouter([])],
     })
     .compileComponents();
 
