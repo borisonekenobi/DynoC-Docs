@@ -1,4 +1,5 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {provideRouter} from '@angular/router';
 
 import {GettingStartedPage} from './getting-started.page';
 
@@ -9,6 +10,7 @@ describe('GettingStartedPage', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [GettingStartedPage],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(GettingStartedPage);

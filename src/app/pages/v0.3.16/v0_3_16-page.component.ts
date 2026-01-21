@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {Version} from '../version';
-import {RouterOutlet} from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {SidebarComponent} from '../../components/sidebar/sidebar.component';
 import {SidebarElement} from '../../../sidebar-element';
 
 @Component({
   selector: 'app-v0.3.16',
   imports: [
-    RouterOutlet, SidebarComponent],
+    RouterOutlet, SidebarComponent, RouterLink, RouterLinkActive],
   templateUrl: '../version.page.html',
   styleUrl: '../version.page.css',
 })

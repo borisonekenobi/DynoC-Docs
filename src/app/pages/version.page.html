@@ -5,8 +5,10 @@
     @if (this.released) {
       <router-outlet></router-outlet>
     } @else {
-      <p>Still working on it! Check <a href="https://github.com/borisonekenobi/DynoC-Docs/releases" target="_blank">the
-        releases page</a> to see if DynoC v{{ this.version }} has been released yet!</p>
+      <p>
+        Still working on it! Check the <a routerLink="/downloads" routerLinkActive="active">Downloads</a> page to see if
+        DynoC v{{ this.version }} has been released yet!
+      </p>
     }
   </section>
 </div>
