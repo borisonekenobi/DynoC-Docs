@@ -14,5 +14,5 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - name: Setup Chrome (for Karma)
-        uses: browser-actions/setup-chrome@v1
+        uses: browser-actions/setup-chrome@v2
       - run: npm run test -- --watch=false --browsers=ChromeHeadless
