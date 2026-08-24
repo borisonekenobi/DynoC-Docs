@@ -1,96 +1,109 @@
-import {Component} from '@angular/core';
+import {
+	AfterViewInit,
+	Component,
+	ElementRef,
+	Signal,
+	viewChild,
+} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ForComponent} from '../../components/code/keyword/for/for.component';
 import {IntComponent} from '../../components/code/keyword/int/int.component';
 import {NumberComponent} from '../../components/code/number/number.component';
 import {
-  PrintLineComponent
+	PrintLineComponent,
 } from '../../components/code/function/print-line/print-line.component';
 import {StringComponent} from '../../components/code/string/string.component';
 import {
-  CommentComponent
+	CommentComponent,
 } from '../../components/code/comment/comment.component';
 import {VarComponent} from '../../components/code/keyword/var/var.component';
 import {IfComponent} from '../../components/code/keyword/if/if.component';
 import {ElseComponent} from '../../components/code/keyword/else/else.component';
 import {
-  FunctionComponent
+	FunctionComponent,
 } from '../../components/code/function/function.component';
 import {
-  ReturnComponent
+	ReturnComponent,
 } from '../../components/code/keyword/return/return.component';
 import {
-  FloatComponent
+	FloatComponent,
 } from '../../components/code/keyword/float/float.component';
 import {
-  PrintComponent
+	PrintComponent,
 } from '../../components/code/function/print/print.component';
 import {
-  StringKWComponent
+	StringKWComponent,
 } from '../../components/code/keyword/string/string.component';
 import {
-  InputComponent
+	InputComponent,
 } from '../../components/code/function/input/input.component';
 import {VoidComponent} from '../../components/code/keyword/void/void.component';
 import {
-  WhileComponent
+	WhileComponent,
 } from '../../components/code/keyword/while/while.component';
 
 @Component({
-  selector: 'app-home', imports: [
-    RouterLink,
-    ForComponent,
-    IntComponent,
-    NumberComponent,
-    PrintLineComponent,
-    StringComponent,
-    CommentComponent,
-    VarComponent,
-    IfComponent,
-    ElseComponent,
-    FunctionComponent,
-    ReturnComponent,
-    FloatComponent,
-    PrintComponent,
-    StringKWComponent,
-    InputComponent,
-    VoidComponent,
-    WhileComponent,
-  ], templateUrl: './home.page.html', styleUrl: './home.page.css',
+	imports: [
+		RouterLink,
+		ForComponent,
+		IntComponent,
+		NumberComponent,
+		PrintLineComponent,
+		StringComponent,
+		CommentComponent,
+		VarComponent,
+		IfComponent,
+		ElseComponent,
+		FunctionComponent,
+		ReturnComponent,
+		FloatComponent,
+		PrintComponent,
+		StringKWComponent,
+		InputComponent,
+		VoidComponent,
+		WhileComponent,
+	],
+	selector: 'app-home',
+	styleUrl: './home.page.css',
+	templateUrl: './home.page.html',
 })
-export class HomePage {
-  timer: number = 0;
-  examples!: HTMLDivElement;
-  index: number = 0;
-  prevIndex: number = 0;
+export class HomePage implements AfterViewInit {
+	private timer: number = 0;
+	private examples: Signal<ElementRef<HTMLDivElement>> = viewChild.required(
+		'codeExamples');
+	private index: number = 0;
+	private prevIndex: number = 0;
 
-  constructor() {
-    setInterval(() => {
-      this.timer += 1;
-      if (this.timer >= 100) this.next();
-    }, 100)
-  }
+	public constructor() {
+		setInterval(() => {
+			this.timer += 1;
+			if (this.timer >= 100) this.next();
+		}, 100);
+	}
 
-  ngOnInit() {
-    this.examples = document.getElementById('code-examples') as HTMLDivElement;
-    this.set();
-  }
+	public ngAfterViewInit(): void {
+		this.set();
+	}
 
-  next() {
-    this.prevIndex = this.index;
-    this.index = (this.index + 1) % this.examples.children.length;
-    this.set();
-  }
+	protected next(): void {
+		this.prevIndex = this.index;
+		this.index = (this.index + 1) %
+			this.examples().nativeElement.children.length;
+		this.set();
+	}
 
-  prev() {
-    this.prevIndex = this.index;
-    this.index = (this.index - 1 + this.examples.children.length) % this.examples.children.length;
-    this.set();
-  }
+	protected prev(): void {
+		this.prevIndex = this.index;
+		const length = this.examples().nativeElement.children.length;
+		this.index = (this.index - 1 + length) % length;
+		this.set();
+	}
 
-  set() {
-    this.examples.children[this.prevIndex].classList.add('hidden');
-    this.examples.children[this.index].classList.remove('hidden');
-    this.timer = 0.0;
-  }
+	private set(): void {
+		this.examples().nativeElement.children[this.prevIndex].classList.add(
+			'hidden');
+		this.examples().nativeElement.children[this.index].classList.remove(
+			'hidden');
+		this.timer = 0.0;
+	}
 }

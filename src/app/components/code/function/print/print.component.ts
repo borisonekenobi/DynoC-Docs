@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {FunctionComponent} from '../function.component';
 
 @Component({
-  selector: 'print',
-  imports: [
-    FunctionComponent],
-  templateUrl: './print.component.html',
-  styleUrl: './print.component.css',
+	imports: [FunctionComponent],
+	selector: 'print',
+	styleUrl: './print.component.css',
+	templateUrl: './print.component.html',
 })
 export class PrintComponent {
 }

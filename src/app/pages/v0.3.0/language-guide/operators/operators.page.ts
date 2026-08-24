@@ -1,11 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-operators.page',
-  imports: [],
-  templateUrl: './operators.page.html',
-  styleUrl: './operators.page.css',
+	imports: [],
+	selector: 'app-operators',
+	styleUrl: './operators.page.css',
+	templateUrl: './operators.page.html',
 })
 export class OperatorsPage {
-
 }

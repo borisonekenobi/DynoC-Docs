@@ -1,14 +1,14 @@
 <div class="guide-container">
-  <app-sidebar [version]="this.version" [layout]="this.sidebarLayout"></app-sidebar>
+	<app-sidebar [layout]="this.sidebarLayout" [version]="this.version"/>
 
-  <section class="guide-content">
-    @if (this.released) {
-      <router-outlet></router-outlet>
-    } @else {
-      <p>
-        Still working on it! Check the <a routerLink="/downloads" routerLinkActive="active">Downloads</a> page to see if
-        DynoC v{{ this.version }} has been released yet!
-      </p>
-    }
-  </section>
+	<section class="guide-content">
+		@if (this.released) {
+			<router-outlet/>
+		} @else {
+			<p>
+				Still working on it! Check the <a routerLink="/downloads" routerLinkActive="active">Downloads</a> page
+				to see if DynoC v{{ this.version }} has been released yet!
+			</p>
+		}
+	</section>
 </div>

@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { IntComponent } from './int.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {IntComponent} from './int.component';
 
 describe('IntComponent', () => {
-  let component: IntComponent;
-  let fixture: ComponentFixture<IntComponent>;
+	let component: IntComponent;
+	let fixture: ComponentFixture<IntComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [IntComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [IntComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(IntComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(IntComponent);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

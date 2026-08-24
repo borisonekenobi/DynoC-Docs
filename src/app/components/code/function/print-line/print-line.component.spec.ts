@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PrintLineComponent } from './print-line.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {PrintLineComponent} from './print-line.component';
 
 describe('PrintLineComponent', () => {
-  let component: PrintLineComponent;
-  let fixture: ComponentFixture<PrintLineComponent>;
+	let component: PrintLineComponent;
+	let fixture: ComponentFixture<PrintLineComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [PrintLineComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [PrintLineComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(PrintLineComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(PrintLineComponent);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

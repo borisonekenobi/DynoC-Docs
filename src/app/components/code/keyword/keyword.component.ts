@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'keyword',
-  imports: [],
-  templateUrl: './keyword.component.html',
-  styleUrl: './keyword.component.css',
+	imports: [],
+	selector: 'keyword',
+	styleUrl: './keyword.component.css',
+	templateUrl: './keyword.component.html',
 })
 export class KeywordComponent {
 }

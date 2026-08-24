@@ -2,12 +2,10 @@ import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 
 @Component({
-  selector: 'app-documentation',
-  imports: [
-    RouterOutlet],
-  templateUrl: './documentation.page.html',
-  styleUrl: './documentation.page.css',
+	imports: [RouterOutlet],
+	selector: 'app-documentation',
+	styleUrl: './documentation.page.css',
+	templateUrl: './documentation.page.html',
 })
 export class DocumentationPage {
-
 }

@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'false',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './false.component.html',
-  styleUrl: './false.component.css'
+	imports: [KeywordComponent],
+	selector: 'false',
+	styleUrl: './false.component.css',
+	templateUrl: './false.component.html',
 })
 export class FalseComponent {
-
 }

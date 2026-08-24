@@ -1,53 +1,53 @@
 import {Component} from '@angular/core';
 import {
-  IntComponent,
+	IntComponent,
 } from '../../../../components/code/keyword/int/int.component';
 import {
-  FloatComponent,
+	FloatComponent,
 } from '../../../../components/code/keyword/float/float.component';
 import {
-  NumberComponent,
+	NumberComponent,
 } from '../../../../components/code/number/number.component';
 import {
-  BoolComponent,
+	BoolComponent,
 } from '../../../../components/code/keyword/bool/bool.component';
 import {
-  TrueComponent,
+	TrueComponent,
 } from '../../../../components/code/keyword/true/true.component';
 import {
-  CommentComponent,
+	CommentComponent,
 } from '../../../../components/code/comment/comment.component';
 import {
-  StringComponent
+	StringComponent,
 } from '../../../../components/code/string/string.component';
 import {
-  VoidComponent
+	VoidComponent,
 } from '../../../../components/code/keyword/void/void.component';
 import {
-  FunctionComponent
+	FunctionComponent,
 } from '../../../../components/code/function/function.component';
 import {IfComponent} from '../../../../components/code/keyword/if/if.component';
 import {
-  PrintLineComponent
+	PrintLineComponent,
 } from '../../../../components/code/function/print-line/print-line.component';
 
 @Component({
-  selector: 'app-variables-and-scope.page',
-  imports: [
-    IntComponent,
-    FloatComponent,
-    NumberComponent,
-    BoolComponent,
-    TrueComponent,
-    CommentComponent,
-    StringComponent,
-    VoidComponent,
-    FunctionComponent,
-    IfComponent,
-    PrintLineComponent,
-  ],
-  templateUrl: './variables-and-scope.page.html',
-  styleUrl: './variables-and-scope.page.css',
+	imports: [
+		IntComponent,
+		FloatComponent,
+		NumberComponent,
+		BoolComponent,
+		TrueComponent,
+		CommentComponent,
+		StringComponent,
+		VoidComponent,
+		FunctionComponent,
+		IfComponent,
+		PrintLineComponent,
+	],
+	selector: 'app-variables-and-scope',
+	styleUrl: './variables-and-scope.page.css',
+	templateUrl: './variables-and-scope.page.html',
 })
 export class VariablesAndScopePage {
 }

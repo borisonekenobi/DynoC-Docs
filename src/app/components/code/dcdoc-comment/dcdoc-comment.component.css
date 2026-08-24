@@ -1,11 +1,11 @@
 span.text {
-  color: var(--dcdoc-text-color);
+	color: var(--dcdoc-text-color);
 }
 
 span.tag {
-  color: var(--dcdoc-tag-color);
+	color: var(--dcdoc-tag-color);
 }
 
 span.no-color {
-  color: var(--code-color) !important;
+	color: var(--code-color) !important;
 }

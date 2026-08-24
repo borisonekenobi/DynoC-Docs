@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {VariablesAndScopePage} from './variables-and-scope.page';
 
-import { VariablesAndScopePage } from './variables-and-scope.page';
+describe('VariablesAndScopePage', () => {
+	let component: VariablesAndScopePage;
+	let fixture: ComponentFixture<VariablesAndScopePage>;
 
-describe('VariablePage', () => {
-  let component: VariablesAndScopePage;
-  let fixture: ComponentFixture<VariablesAndScopePage>;
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [VariablesAndScopePage],
+		}).compileComponents();
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [VariablesAndScopePage]
-    })
-    .compileComponents();
+		fixture = TestBed.createComponent(VariablesAndScopePage);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-    fixture = TestBed.createComponent(VariablesAndScopePage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'return',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './return.component.html',
-  styleUrl: './return.component.css'
+	imports: [KeywordComponent],
+	selector: 'return',
+	styleUrl: './return.component.css',
+	templateUrl: './return.component.html',
 })
 export class ReturnComponent {
-
 }

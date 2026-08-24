@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'break',
-  imports: [
-    KeywordComponent],
-  templateUrl: './break.component.html',
-  styleUrl: './break.component.css',
+	imports: [KeywordComponent],
+	selector: 'break',
+	styleUrl: './break.component.css',
+	templateUrl: './break.component.html',
 })
 export class BreakComponent {
 }

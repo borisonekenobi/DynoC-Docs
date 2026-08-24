@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'function',
-  imports: [],
-  templateUrl: './function.component.html',
-  styleUrl: './function.component.css',
+	imports: [],
+	selector: 'function',
+	styleUrl: './function.component.css',
+	templateUrl: './function.component.html',
 })
 export class FunctionComponent {
 }

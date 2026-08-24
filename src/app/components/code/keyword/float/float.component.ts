@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'float',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './float.component.html',
-  styleUrl: './float.component.css'
+	imports: [KeywordComponent],
+	selector: 'float',
+	styleUrl: './float.component.css',
+	templateUrl: './float.component.html',
 })
 export class FloatComponent {
-
 }

@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'string-kw',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './string.component.html',
-  styleUrl: './string.component.css'
+	imports: [KeywordComponent],
+	selector: 'string-kw',
+	styleUrl: './string.component.css',
+	templateUrl: './string.component.html',
 })
 export class StringKWComponent {
-
 }

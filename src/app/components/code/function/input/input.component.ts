@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {FunctionComponent} from '../function.component';
 
 @Component({
-  selector: 'input-fn',
-  imports: [
-    FunctionComponent],
-  templateUrl: './input.component.html',
-  styleUrl: './input.component.css',
+	imports: [FunctionComponent],
+	selector: 'input-fn',
+	styleUrl: './input.component.css',
+	templateUrl: './input.component.html',
 })
 export class InputComponent {
 }

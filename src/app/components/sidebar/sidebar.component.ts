@@ -1,29 +1,29 @@
-import {Component, Input} from '@angular/core';
-import {Router, RouterLink, RouterLinkActive} from '@angular/router';
+import {Component, inject, input, InputSignal} from '@angular/core';
 import {SidebarElement} from '../../../sidebar-element';
+import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar',
-  imports: [
-    RouterLink, RouterLinkActive],
-  templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css',
+	imports: [RouterLink, RouterLinkActive],
+	selector: 'app-sidebar',
+	styleUrl: './sidebar.component.css',
+	templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-  @Input({required: true}) version!: string;
-  @Input({required: true}) layout!: SidebarElement[];
-  versions: string[] = ['0.3.16', '0.3.0'];
+	public readonly version: InputSignal<string> = input.required();
+	public readonly layout: InputSignal<SidebarElement[]> = input.required();
 
-  constructor(private router: Router) {
-  }
+	protected readonly versions: string[] = ['0.3.16', '0.3.0'];
 
-  versionChange() {
-    const versionElem = document.getElementById('version') as HTMLSelectElement;
-    this.router.navigate([`/documentation/${versionElem.value}`]).
-      then(r => {
-        if (!r) {
-          console.error('Navigation to selected version failed!');
-        }
-      });
-  }
+	private readonly router: Router = inject(Router);
+
+	protected versionChange(): void {
+		const versionElem = document.getElementById(
+			'version') as HTMLSelectElement;
+		this.router.navigate([`/documentation/${versionElem.value}`]).
+			then((r) => {
+				if (!r) {
+					console.error('Navigation to selected version failed!');
+				}
+			});
+	}
 }

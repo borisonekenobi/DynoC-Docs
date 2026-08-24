@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'while',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './while.component.html',
-  styleUrl: './while.component.css'
+	imports: [KeywordComponent],
+	selector: 'while',
+	styleUrl: './while.component.css',
+	templateUrl: './while.component.html',
 })
 export class WhileComponent {
-
 }

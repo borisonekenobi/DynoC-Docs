@@ -1,24 +1,21 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {provideRouter} from '@angular/router';
-
 import {GettingStartedPage} from './getting-started.page';
 
 describe('GettingStartedPage', () => {
-  let component: GettingStartedPage;
-  let fixture: ComponentFixture<GettingStartedPage>;
+	let component: GettingStartedPage;
+	let fixture: ComponentFixture<GettingStartedPage>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [GettingStartedPage],
-      providers: [provideRouter([])],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [GettingStartedPage],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(GettingStartedPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(GettingStartedPage);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

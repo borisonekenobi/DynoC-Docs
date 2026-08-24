@@ -1,47 +1,47 @@
 <div class="home">
-  <h1>DynoC Programming Language</h1>
-  <p class="tagline">
-    A modern, lightweight programming language with C-like syntax
-    and dynamic typing.
-  </p>
+	<h1>DynoC Programming Language</h1>
+	<p class="tagline">
+		A modern, lightweight programming language with C-like syntax
+		and dynamic typing.
+	</p>
 
-  <div class="actions">
-    <a routerLink="/getting-started" class="btn primary">Get Started</a>
-    <a href="https://github.com/borisonekenobi/DynoC-Docs" target="_blank" class="btn">View on GitHub</a>
-  </div>
+	<div class="actions">
+		<a class="btn primary" routerLink="/getting-started">Get Started</a>
+		<a class="btn" href="https://github.com/borisonekenobi/DynoC-Docs" target="_blank">View on GitHub</a>
+	</div>
 
-  <h2>Why DynoC?</h2>
-  <ul>
-    <li><strong>C-style syntax</strong> with dynamic typing for fast prototyping.</li>
-    <li><strong>Simple runtime</strong> that compiles to efficient assembly code.</li>
-    <li><strong>Cross-platform support</strong> planned (Linux, Windows, 32/64-bit).</li>
-    <li><strong>Growing standard library</strong> with familiar functions like <code>print()</code> and
-      <code>input()</code>.
-    </li>
-  </ul>
+	<h2>Why DynoC?</h2>
+	<ul>
+		<li><strong>C-style syntax</strong> with dynamic typing for fast prototyping.</li>
+		<li><strong>Simple runtime</strong> that compiles to efficient assembly code.</li>
+		<li><strong>Cross-platform support</strong> planned (Linux, Windows, 32/64-bit).</li>
+		<li><strong>Growing standard library</strong> with familiar functions like <code>print()</code> and
+			<code>input()</code>.
+		</li>
+	</ul>
 
-  <h2>Example</h2>
-  <div class="examples-container">
-    <button id="prev" class="arrow" (click)="prev()"><</button>
-    <div id="code-examples">
-      <div>
-        <p class="example-title">hello_world.dc</p>
-        <pre>
+	<h2>Example</h2>
+	<div class="examples-container">
+		<button (click)="prev()" class="arrow" id="prev"><</button>
+		<div #codeExamples>
+			<div>
+				<p class="example-title">hello_world.dc</p>
+				<pre>
 <print_line/>(<string>Hello, World!</string>);
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">basic_arithmetic.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">basic_arithmetic.dc</p>
+				<pre>
 <var-kw/> a = <number>10</number>;
 <var-kw/> b = <number>3</number>;
 <print_line/>(<string>a + b = </string>, a + b);
 <print_line/>(<string>a / b = </string>, a / b);
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">if_else.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">if_else.dc</p>
+				<pre>
 <var-kw/> num = <number>7</number>;
 <if/> (num % <number>2</number> == <number>0</number>)
 &#123;
@@ -52,19 +52,19 @@
     <print_line/>(<string>Odd</string>);
 &#125;
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">simple_loop.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">simple_loop.dc</p>
+				<pre>
 <for/> (<var-kw/> i = <number>1</number>; i <= <number>5</number>; i++)
 &#123;
     <print_line/>(<string>Count: </string>, i);
 &#125;
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">factorial.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">factorial.dc</p>
+				<pre>
 <int/> <function>factorial</function>(n)
 &#123;
     <if/> (n <= <number>1</number>) <return/> <number>1</number>;
@@ -73,10 +73,10 @@
 
 <print_line/>(<string>Factorial of 5 is </string>, <function>factorial</function>(<number>5</number>));
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">average_of_array.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">average_of_array.dc</p>
+				<pre>
 <float/> <function>average</function>(<int/>[] arr)
 &#123;
     <float/> sum = <number>0</number>;
@@ -90,10 +90,10 @@
 <var-kw/> nums = [<number>5</number>, <number>10</number>, <number>15</number>, <number>20</number>];
 <print_line/>(<string>Average: </string>, <function>average</function>(nums));
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">fibonacci_sequence.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">fibonacci_sequence.dc</p>
+				<pre>
 <int/> <function>fib</function>(n)
 &#123;
     <if/> (n <= <number>1</number>) <return/> <number>0</number>;
@@ -106,25 +106,25 @@
     <print/>(<function>fib</function>(i), <string> </string>);
 &#125;
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">input.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">input.dc</p>
+				<pre>
 <string-kw/> name = <input-fn/>(<string>Enter your name: </string>);
 <print_line/>(<string>Welcome, </string>, name);
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">array_manipulation.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">array_manipulation.dc</p>
+				<pre>
 <var-kw/> arr = [<number>1</number>, <number>2</number>, <number>3</number>];
 arr[<number>1</number>] = <number>99</number>;
 <print_line/>(<string>Array: </string>, arr);
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">find_max_value.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">find_max_value.dc</p>
+				<pre>
 <int/> <function>max_of</function>(<int/>[] arr)
 &#123;
     <var-kw/> max = arr[<number>0</number>];
@@ -137,10 +137,10 @@ arr[<number>1</number>] = <number>99</number>;
 
 <print_line/>(<function>max_of</function>([<number>3</number>, <number>8</number>, <number>2</number>, <number>5</number>]));
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">multiplication_tables.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">multiplication_tables.dc</p>
+				<pre>
 <void/> <function>table</function>(<int/> n)
 &#123;
     <for/> (<var-kw/> i = <number>1</number>; i <= <number>10</number>; i++)
@@ -151,10 +151,10 @@ arr[<number>1</number>] = <number>99</number>;
 
 <function>table</function>(<number>5</number>);
 </pre>
-      </div>
-      <div class="hidden">
-        <p class="example-title">sum_of_digits.dc</p>
-        <pre>
+			</div>
+			<div class="hidden">
+				<p class="example-title">sum_of_digits.dc</p>
+				<pre>
 <int/> <function>sum_digits</function>(<int/> num)
 &#123;
     <var-kw/> total = <number>0</number>;
@@ -169,16 +169,16 @@ arr[<number>1</number>] = <number>99</number>;
 
 <print_line/>(<function>sum_digits</function>(<number>12345</number>)); <comment>// 15</comment>
 </pre>
-      </div>
-    </div>
-    <button id="next" class="arrow" (click)="next()">></button>
-  </div>
+			</div>
+		</div>
+		<button (click)="next()" class="arrow" id="next">></button>
+	</div>
 
-  <div class="note.info">
-    <p>
-      DynoC is in early development. Features are being added quickly,
-      check the <a href="https://github.com/borisonekenobi/DynoC-Docs/issues" target="_blank">issues page</a>
-      to follow progress.
-    </p>
-  </div>
+	<div class="note.info">
+		<p>
+			DynoC is in early development. Features are being added quickly,
+			check the <a href="https://github.com/borisonekenobi/DynoC-Docs/issues" target="_blank">issues page</a>
+			to follow progress.
+		</p>
+	</div>
 </div>

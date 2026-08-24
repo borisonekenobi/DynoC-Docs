@@ -1,11 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-contributing',
-  imports: [],
-  templateUrl: './contributing.page.html',
-  styleUrl: './contributing.page.css',
+	imports: [],
+	selector: 'app-contributing',
+	styleUrl: './contributing.page.css',
+	templateUrl: './contributing.page.html',
 })
 export class ContributingPage {
-
 }

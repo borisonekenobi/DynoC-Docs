@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'char',
   imports: [],
-  templateUrl: './char.component.html',
+	selector: 'char',
   styleUrl: './char.component.css',
+	templateUrl: './char.component.html',
 })
 export class CharComponent {
 }

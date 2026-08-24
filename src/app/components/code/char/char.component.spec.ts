@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CharComponent } from './char.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {CharComponent} from './char.component';
 
 describe('CharComponent', () => {
   let component: CharComponent;
@@ -8,13 +7,12 @@ describe('CharComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CharComponent]
-    })
-    .compileComponents();
+		imports: [CharComponent],
+	}).compileComponents();
 
     fixture = TestBed.createComponent(CharComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+	  await fixture.whenStable();
   });
 
   it('should create', () => {

@@ -4,10 +4,10 @@
 <p>The input is always returned as a string.</p>
 
 <div class="note-box note-warning">
-  <strong>Warning:</strong> The <code>input()</code> function does not handle multi-line paste correctly.
-  If multiple lines are pasted into the terminal, they are treated as a single input instead of being split.
-  Please see <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/12" target="_blank">
-  the GitHub Issues page</a> for more details.
+	<strong>Warning:</strong> The <code>input()</code> function does not handle multi-line paste correctly.
+	If multiple lines are pasted into the terminal, they are treated as a single input instead of being split.
+	Please see <a href="https://github.com/borisonekenobi/DynoC-Docs/issues/12" target="_blank">
+	the GitHub Issues page</a> for more details.
 </div>
 
 <h3>Syntax</h3>
@@ -16,82 +16,83 @@
 <input-fn/>(prompt);
 </pre>
 <table>
-  <thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><code>prompt</code></td>
-    <td>string (optional)</td>
-    <td>Text to display before waiting for input.</td>
-  </tr>
-  </tbody>
+	<thead>
+	<tr>
+		<th>Parameter</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><code>prompt</code></td>
+		<td>string (optional)</td>
+		<td>Text to display before waiting for input.</td>
+	</tr>
+	</tbody>
 </table>
 <table>
-  <thead>
-  <tr>
-    <th>Returns</th>
-    <th>Type</th>
-    <th>Description</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td><code>value</code></td>
-    <td>string</td>
-    <td>The text entered by the user.</td>
-  </tr>
-  </tbody>
+	<thead>
+	<tr>
+		<th>Returns</th>
+		<th>Type</th>
+		<th>Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td><code>value</code></td>
+		<td>string</td>
+		<td>The text entered by the user.</td>
+	</tr>
+	</tbody>
 </table>
 
 <h3>Description</h3>
 <p><code>input()</code> pauses program execution and waits for the user to type a line of text, ending with the Enter
-  key.</p>
+	key.</p>
 <p>The entered text is returned as a <code>string</code> without the newline character.</p>
 <p>If a prompt is given, it is displayed before reading input.</p>
 
 <h3>Notes</h3>
 <ul>
-  <li>
-    <p>
-      Always returns a string, regardless of what the user types.
-    </p>
-  </li>
-  <li>
-    <p>
-      Works well with <a routerLink="/documentation/0.3.0/standard-library/print"><code>print()</code></a> and
-      <a routerLink="/documentation/0.3.0/standard-library/print_line"><code>print_line()</code></a> for interactive programs.
-    </p>
-  </li>
-  <li>
-    <p>
-      Input reading blocks execution until the user presses Enter.
-    </p>
-  </li>
+	<li>
+		<p>
+			Always returns a string, regardless of what the user types.
+		</p>
+	</li>
+	<li>
+		<p>
+			Works well with <a routerLink="/documentation/0.3.0/standard-library/print"><code>print()</code></a> and
+			<a routerLink="/documentation/0.3.0/standard-library/print_line"><code>print_line()</code></a> for
+			interactive programs.
+		</p>
+	</li>
+	<li>
+		<p>
+			Input reading blocks execution until the user presses Enter.
+		</p>
+	</li>
 </ul>
 
 <h3>See Also</h3>
 <ul>
-  <li>
-    <p>
-      <a routerLink="/documentation/0.3.0/standard-library/print"><code>print()</code></a>
-      - prints without newline
-    </p>
-  </li>
-  <li>
-    <p>
-      <a routerLink="/documentation/0.3.0/standard-library/print_line"><code>print_line()</code></a>
-      - prints with newline
-    </p>
-  </li>
-  <li>
-    <p>
-      <a routerLink="/documentation/0.3.0/standard-library/print_error"><code>print_error()</code></a>
-      - prints to standard error
-    </p>
-  </li>
+	<li>
+		<p>
+			<a routerLink="/documentation/0.3.0/standard-library/print"><code>print()</code></a>
+			- prints without newline
+		</p>
+	</li>
+	<li>
+		<p>
+			<a routerLink="/documentation/0.3.0/standard-library/print_line"><code>print_line()</code></a>
+			- prints with newline
+		</p>
+	</li>
+	<li>
+		<p>
+			<a routerLink="/documentation/0.3.0/standard-library/print_error"><code>print_error()</code></a>
+			- prints to standard error
+		</p>
+	</li>
 </ul>

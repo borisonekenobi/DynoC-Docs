@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {FunctionComponent} from '../function.component';
 
 @Component({
-  selector: 'print_error',
-  imports: [
-    FunctionComponent],
-  templateUrl: './print-error.component.html',
-  styleUrl: './print-error.component.css',
+	imports: [FunctionComponent],
+	selector: 'print_error',
+	styleUrl: './print-error.component.css',
+	templateUrl: './print-error.component.html',
 })
 export class PrintErrorComponent {
 }
