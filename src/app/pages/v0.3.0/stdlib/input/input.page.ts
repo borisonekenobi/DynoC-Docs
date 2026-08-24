@@ -1,18 +1,14 @@
 import {Component} from '@angular/core';
 import {
-  InputComponent
+	InputComponent,
 } from '../../../../components/code/function/input/input.component';
 import {RouterLink} from '@angular/router';
 
 @Component({
-  selector: 'app-input',
-  imports: [
-    InputComponent,
-    RouterLink,
-  ],
-  templateUrl: './input.page.html',
-  styleUrl: './input.page.css',
+	imports: [InputComponent, RouterLink],
+	selector: 'app-input',
+	styleUrl: './input.page.css',
+	templateUrl: './input.page.html',
 })
 export class InputPage {
-
 }

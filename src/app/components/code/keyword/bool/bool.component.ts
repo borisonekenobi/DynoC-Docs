@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'bool',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './bool.component.html',
-  styleUrl: './bool.component.css'
+	imports: [KeywordComponent],
+	selector: 'bool',
+	styleUrl: './bool.component.css',
+	templateUrl: './bool.component.html',
 })
 export class BoolComponent {
-
 }

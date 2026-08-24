@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BreakComponent } from './break.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {BreakComponent} from './break.component';
 
 describe('BreakComponent', () => {
-  let component: BreakComponent;
-  let fixture: ComponentFixture<BreakComponent>;
+	let component: BreakComponent;
+	let fixture: ComponentFixture<BreakComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [BreakComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [BreakComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(BreakComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(BreakComponent);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

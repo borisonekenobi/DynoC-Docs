@@ -1,22 +1,22 @@
 .sidebar {
-  width: 200px;
-  padding: 1rem;
-  border-right: 1px solid #ddd;
+	width: 200px;
+	padding: 1rem;
+	border-right: 1px solid #ddd;
 }
 
 .sidebar h3 {
-  margin-top: 1.5rem;
-  font-size: 1.2rem;
+	font-size: 1.2rem;
+	margin-top: 1.5rem;
 }
 
 .sidebar a {
-  display: block;
-  padding: 0.4rem 0;
-  color: #007acc;
-  text-decoration: none;
+	display: block;
+	padding: 0.4rem 0;
+	text-decoration: none;
+	color: #007acc;
 }
 
 .sidebar a.active {
-  font-weight: bold;
-  text-decoration: underline;
+	font-weight: bold;
+	text-decoration: underline;
 }

@@ -2,11 +2,10 @@ import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'exit',
-  imports: [
-    KeywordComponent],
-  templateUrl: './exit.component.html',
-  styleUrl: './exit.component.css',
+	imports: [KeywordComponent],
+	selector: 'exit',
+	styleUrl: './exit.component.css',
+	templateUrl: './exit.component.html',
 })
 export class ExitComponent {
 }

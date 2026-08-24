@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'var-kw',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './var.component.html',
-  styleUrl: './var.component.css'
+	imports: [KeywordComponent],
+	selector: 'var-kw',
+	styleUrl: './var.component.css',
+	templateUrl: './var.component.html',
 })
 export class VarComponent {
-
 }

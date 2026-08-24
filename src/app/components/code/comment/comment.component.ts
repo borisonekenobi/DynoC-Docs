@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'comment',
   imports: [],
-  templateUrl: './comment.component.html',
+	selector: 'comment',
   styleUrl: './comment.component.css',
+	templateUrl: './comment.component.html',
 })
 export class CommentComponent {
 }

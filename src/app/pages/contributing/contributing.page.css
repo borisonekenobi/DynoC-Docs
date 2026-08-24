@@ -1,13 +1,13 @@
 ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+	padding-left: 1.5rem;
+	list-style: disc;
 }
 
 a {
-  color: #1976d2;
-  text-decoration: none;
+	text-decoration: none;
+	color: #1976d2;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }

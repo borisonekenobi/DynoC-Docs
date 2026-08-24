@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'int',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './int.component.html',
-  styleUrl: './int.component.css'
+	imports: [KeywordComponent],
+	selector: 'int',
+	styleUrl: './int.component.css',
+	templateUrl: './int.component.html',
 })
 export class IntComponent {
-
 }

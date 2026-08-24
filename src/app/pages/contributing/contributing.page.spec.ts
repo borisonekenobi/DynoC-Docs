@@ -1,22 +1,21 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-
 import {ContributingPage} from './contributing.page';
 
 describe('ContributingPage', () => {
-  let component: ContributingPage;
-  let fixture: ComponentFixture<ContributingPage>;
+	let component: ContributingPage;
+	let fixture: ComponentFixture<ContributingPage>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ContributingPage],
-    }).compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [ContributingPage],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(ContributingPage);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(ContributingPage);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

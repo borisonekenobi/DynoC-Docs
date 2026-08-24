@@ -1,19 +1,23 @@
-import {Injectable} from '@angular/core';
-import {Service} from './service';
+import {Service} from '@angular/core';
 import {Release} from '../models/release';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class ReleaseService extends Service {
-  async getReleases(): Promise<Release[]> {
-    const res = await this.get(
-      'https://api.github.com/repos/borisonekenobi/DynoC-Docs/releases');
-    if (!res.ok) {
-      throw new Error(
-        `GitHub releases request failed: ${res.status} ${res.statusText}`);
-    }
+@Service()
+export class ReleaseService {
+	public async getReleases(): Promise<Release[]> {
+		const res = await fetch(
+			'https://api.github.com/repos/borisonekenobi/DynoC-Docs/releases', {
+				method: 'GET',
+				headers: {
+					Accept: 'application/vnd.github.html+json',
+					'X-GitHub-Api-Version': '2022-11-28',
+				},
+			});
 
-    return res.json();
-  }
+		if (!res.ok) {
+			throw new Error(
+				`GitHub releases request failed: ${res.status} ${res.statusText}`);
+		}
+
+		return res.json();
+	}
 }

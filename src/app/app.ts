@@ -4,11 +4,10 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {FooterComponent} from './components/footer/footer.component';
 
 @Component({
-  selector: 'app-root',
   imports: [RouterOutlet, NavbarComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+	selector: 'app-root',
+	styleUrl: './app.css',
+	templateUrl: './app.html',
 })
-export class AppComponent {
-
+export class App {
 }

@@ -1,18 +1,18 @@
-import {Component, Input} from '@angular/core';
+import {Component, input} from '@angular/core';
 
 @Component({
-  selector: 'dcdoc-comment',
-  imports: [],
-  templateUrl: './dcdoc-comment.component.html',
-  styleUrl: './dcdoc-comment.component.css'
+	imports: [],
+	selector: 'dcdoc-comment',
+	styleUrl: './dcdoc-comment.component.css',
+	templateUrl: './dcdoc-comment.component.html',
 })
 export class DCDocCommentComponent {
-  @Input({required: true}) info!: {
-    description?: string;
-    params: {
-      name: string;
-      description: string;
-    }[];
-    returns?: string;
-  };
+	public readonly info = input.required<{
+		description?: string;
+		params: {
+			name: string;
+			description: string;
+		}[];
+		returns?: string;
+	}>();
 }

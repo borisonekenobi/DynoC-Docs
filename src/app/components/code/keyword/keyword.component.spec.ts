@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {KeywordComponent} from './keyword.component';
 
-import { KeywordComponent } from './keyword.component';
+describe('KeywordComponent', () => {
+	let component: KeywordComponent;
+	let fixture: ComponentFixture<KeywordComponent>;
 
-describe('CodeKeywordComponent', () => {
-  let component: KeywordComponent;
-  let fixture: ComponentFixture<KeywordComponent>;
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [KeywordComponent],
+		}).compileComponents();
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [KeywordComponent]
-    })
-    .compileComponents();
+		fixture = TestBed.createComponent(KeywordComponent);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-    fixture = TestBed.createComponent(KeywordComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

@@ -1,21 +1,19 @@
 import {Component} from '@angular/core';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {
-  PrintLineComponent
+	PrintLineComponent,
 } from '../../components/code/function/print-line/print-line.component';
 import {StringComponent} from '../../components/code/string/string.component';
-import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
-  selector: 'app-getting-started',
-  imports: [
-    PrintLineComponent,
-    StringComponent,
-    RouterLinkActive,
-    RouterLink,
-  ],
-  templateUrl: './getting-started.page.html',
-  styleUrl: './getting-started.page.css',
+	imports: [
+		PrintLineComponent,
+		StringComponent,
+		RouterLinkActive,
+		RouterLink],
+	selector: 'app-getting-started',
+	styleUrl: './getting-started.page.css',
+	templateUrl: './getting-started.page.html',
 })
 export class GettingStartedPage {
-
 }

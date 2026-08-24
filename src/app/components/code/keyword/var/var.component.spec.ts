@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { VarComponent } from './var.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {VarComponent} from './var.component';
 
 describe('VarComponent', () => {
-  let component: VarComponent;
-  let fixture: ComponentFixture<VarComponent>;
+	let component: VarComponent;
+	let fixture: ComponentFixture<VarComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [VarComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [VarComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(VarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(VarComponent);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

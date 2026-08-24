@@ -1,23 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { VoidComponent } from './void.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {VoidComponent} from './void.component';
 
 describe('VoidComponent', () => {
-  let component: VoidComponent;
-  let fixture: ComponentFixture<VoidComponent>;
+	let component: VoidComponent;
+	let fixture: ComponentFixture<VoidComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [VoidComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [VoidComponent],
+		}).compileComponents();
 
-    fixture = TestBed.createComponent(VoidComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(VoidComponent);
+		component = fixture.componentInstance;
+		await fixture.whenStable();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+	it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

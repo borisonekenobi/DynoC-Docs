@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '26'
           cache: 'npm'
       - run: npm ci
       - name: Setup Chrome (for Karma)
         uses: browser-actions/setup-chrome@v2
-      - run: npm run test -- --watch=false --browsers=ChromeHeadless
+      -   run: npm run test

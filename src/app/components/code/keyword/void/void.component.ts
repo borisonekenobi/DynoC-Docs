@@ -1,14 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
-  selector: 'void',
-  imports: [
-    KeywordComponent,
-  ],
-  templateUrl: './void.component.html',
-  styleUrl: './void.component.css'
+	imports: [KeywordComponent],
+	selector: 'void',
+	styleUrl: './void.component.css',
+	templateUrl: './void.component.html',
 })
 export class VoidComponent {
-
 }

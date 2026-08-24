@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'number',
-  imports: [],
-  templateUrl: './number.component.html',
-  styleUrl: './number.component.css',
+	imports: [],
+	selector: 'number',
+	styleUrl: './number.component.css',
+	templateUrl: './number.component.html',
 })
 export class NumberComponent {
 }

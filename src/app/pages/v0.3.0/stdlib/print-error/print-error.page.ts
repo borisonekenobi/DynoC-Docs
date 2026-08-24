@@ -1,18 +1,14 @@
 import {Component} from '@angular/core';
-import {
-  PrintErrorComponent
-} from '../../../../components/code/function/print-error/print-error.component';
 import {RouterLink} from '@angular/router';
+import {
+	PrintErrorComponent,
+} from '../../../../components/code/function/print-error/print-error.component';
 
 @Component({
-  selector: 'app-print-error',
-  imports: [
-    PrintErrorComponent,
-    RouterLink,
-  ],
-  templateUrl: './print-error.page.html',
-  styleUrl: './print-error.page.css',
+	imports: [RouterLink, PrintErrorComponent],
+	selector: 'app-print-error',
+	styleUrl: './print-error.page.css',
+	templateUrl: './print-error.page.html',
 })
 export class PrintErrorPage {
-
 }

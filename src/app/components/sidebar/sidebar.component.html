@@ -1,21 +1,25 @@
 <aside id="sidebar" class="sidebar">
-  <select name="version" id="version" (change)="versionChange()">
-    @for (version of this.versions; track version) {
-      <option [value]="version" [defaultSelected]="version === this.version">DynoC v{{ version }}</option>
-    }
-  </select>
+	<select (change)="versionChange()" id="version" name="version">
+		@for (version of this.versions; track version) {
+			<option [defaultSelected]="version === this.version()" [value]="version">
+				DynoC v{{ version }}
+			</option>
+		}
+	</select>
 
-  @for (element of this.layout; track element) {
-    @if ('name' in element) {
-      <h3>{{ element.name }}</h3>
-      <nav>
-        @for (child of element.children; track child) {
-          @if ('name' in child) {
-            <a [routerLink]="`/documentation/${this.version}/${element.path}/${child.path}`"
-               routerLinkActive="active">{{ child.name }}</a>
-          }
-        }
-      </nav>
-    }
-  }
+	@for (element of this.layout(); track element) {
+		@if ('name' in element) {
+			<h3>{{ element.name }}</h3>
+			<nav>
+				@for (child of element.children; track child) {
+					@if ('name' in child) {
+						<a [routerLink]="`/documentation/${this.version()}/${element.path}/${child.path}`"
+						   routerLinkActive="active">
+							{{ child.name }}
+						</a>
+					}
+				}
+			</nav>
+		}
+	}
 </aside>

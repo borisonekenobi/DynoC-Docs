@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CommentComponent } from './comment.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {CommentComponent} from './comment.component';
 
 describe('CommentComponent', () => {
   let component: CommentComponent;
@@ -8,13 +7,12 @@ describe('CommentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommentComponent]
-    })
-    .compileComponents();
+		imports: [CommentComponent],
+	}).compileComponents();
 
     fixture = TestBed.createComponent(CommentComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+	  await fixture.whenStable();
   });
 
   it('should create', () => {

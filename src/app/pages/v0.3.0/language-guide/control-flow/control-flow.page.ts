@@ -1,62 +1,61 @@
 import {Component} from '@angular/core';
 import {
-  IntComponent,
+	IntComponent,
 } from '../../../../components/code/keyword/int/int.component';
 import {
-  NumberComponent,
+	NumberComponent,
 } from '../../../../components/code/number/number.component';
 import {IfComponent} from '../../../../components/code/keyword/if/if.component';
 import {
-  StringComponent,
+	StringComponent,
 } from '../../../../components/code/string/string.component';
 import {
-  ElseComponent,
+	ElseComponent,
 } from '../../../../components/code/keyword/else/else.component';
 import {
-  WhileComponent,
+	WhileComponent,
 } from '../../../../components/code/keyword/while/while.component';
 import {
-  ForComponent,
+	ForComponent,
 } from '../../../../components/code/keyword/for/for.component';
 import {
-  BreakComponent,
+	BreakComponent,
 } from '../../../../components/code/keyword/break/break.component';
 import {
-  ContinueComponent,
+	ContinueComponent,
 } from '../../../../components/code/keyword/continue/continue.component';
 import {
-  CommentComponent,
+	CommentComponent,
 } from '../../../../components/code/comment/comment.component';
 import {
-  ExitComponent
+	ExitComponent,
 } from '../../../../components/code/keyword/exit/exit.component';
 import {
-  PrintLineComponent
+	PrintLineComponent,
 } from '../../../../components/code/function/print-line/print-line.component';
 import {
-  PrintErrorComponent
+	PrintErrorComponent,
 } from '../../../../components/code/function/print-error/print-error.component';
 
 @Component({
-  selector: 'app-control-flow',
-  imports: [
-    IntComponent,
-    NumberComponent,
-    IfComponent,
-    StringComponent,
-    ElseComponent,
-    WhileComponent,
-    ForComponent,
-    BreakComponent,
-    ContinueComponent,
-    CommentComponent,
-    ExitComponent,
-    PrintLineComponent,
-    PrintErrorComponent,
-  ],
-  templateUrl: './control-flow.page.html',
-  styleUrl: './control-flow.page.css',
+	imports: [
+		IntComponent,
+		NumberComponent,
+		IfComponent,
+		StringComponent,
+		ElseComponent,
+		WhileComponent,
+		ForComponent,
+		BreakComponent,
+		ContinueComponent,
+		CommentComponent,
+		ExitComponent,
+		PrintLineComponent,
+		PrintErrorComponent,
+	],
+	selector: 'app-control-flow',
+	styleUrl: './control-flow.page.css',
+	templateUrl: './control-flow.page.html',
 })
 export class ControlFlowPage {
-
 }

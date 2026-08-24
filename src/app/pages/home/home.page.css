@@ -1,140 +1,140 @@
 .home {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  text-align: center;
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+	text-align: center;
 }
 
 .tagline {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #444;
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	color: #444;
 }
 
 .actions {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .actions .btn {
-  display: inline-block;
-  margin: 0 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: 1px solid #007acc;
-  color: #007acc;
+	display: inline-block;
+	margin: 0 0.5rem;
+	padding: 0.75rem 1.25rem;
+	text-decoration: none;
+	color: #007acc;
+	border: 1px solid #007acc;
+	border-radius: 6px;
 }
 
 .actions .btn.primary {
-  background: #007acc;
-  color: #fff;
+	color: #fff;
+	background: #007acc;
 }
 
 h2 {
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
 }
 
 ul {
-  text-align: left;
-  display: inline-block;
-  margin: 0 auto 2rem auto;
-  padding-left: 1.5rem;
-  line-height: 1.6;
+	line-height: 1.6;
+	display: inline-block;
+	margin: 0 auto 2rem auto;
+	padding-left: 1.5rem;
+	text-align: left;
 }
 
 div .examples-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  margin: auto;
-  width: fit-content;
-  height: fit-content;
+	display: grid;
+	width: fit-content;
+	height: fit-content;
+	margin: auto;
+	grid-template-columns: auto auto auto;
 }
 
 .arrow {
-  margin: 0;
-  border-radius: 10px;
-  border: none;
-  height: 100%;
-  padding: 10px;
-  font-family: Consolas, 'Courier New', Courier, monospace;
-  background: var(--code-background);
-  color: var(--code-color);
+	font-family: Consolas, 'Courier New', Courier, monospace;
+	height: 100%;
+	margin: 0;
+	padding: 10px;
+	color: var(--code-color);
+	border: none;
+	border-radius: 10px;
+	background: var(--code-background);
 }
 
 .arrow:hover {
-  background: #333;
-  cursor: pointer;
+	cursor: pointer;
+	background: #333;
 }
 
 #prev {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: 1px solid var(--code-color);
+	border-right: 1px solid var(--code-color);
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 #next {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-left: 1px solid var(--code-color);
+	border-left: 1px solid var(--code-color);
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 p.example-title {
-  background: var(--code-background);
-  margin: 0;
-  border-bottom: 1px solid var(--code-color);
-  padding: 2px;
-  color: var(--code-color);
-  text-align: center;
-  font-weight: 200;
-  font-size: 0.75rem;
+	font-size: 0.75rem;
+	font-weight: 200;
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+	color: var(--code-color);
+	border-bottom: 1px solid var(--code-color);
+	background: var(--code-background);
 }
 
 pre {
-  margin: auto;
-  border-radius: 0;
-  text-align: left;
-  width: 500px;
-  overflow-x: auto;
+	overflow-x: auto;
+	width: 500px;
+	margin: auto;
+	text-align: left;
+	border-radius: 0;
 }
 
 .hidden {
-  display: none;
+	display: none;
 }
 
 @media (max-width: 600px) {
-  .home {
-    padding: 0 0.5rem;
-  }
+	.home {
+		padding: 0 0.5rem;
+	}
 
-  .actions .btn {
-    display: block;
-    margin: 0.5rem auto;
-  }
+	.actions .btn {
+		display: block;
+		margin: 0.5rem auto;
+	}
 
-  div .examples-container {
-    grid-template-columns: auto;
-    width: fit-content;
-  }
+	div .examples-container {
+		width: fit-content;
+		grid-template-columns: auto;
+	}
 
-  #prev {
-    border-radius: 10px;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    border-right: none;
-    border-bottom: 1px solid var(--code-color);
-  }
+	#prev {
+		border-right: none;
+		border-bottom: 1px solid var(--code-color);
+		border-radius: 10px;
+		border-bottom-right-radius: 0 !important;
+		border-bottom-left-radius: 0 !important;
+	}
 
-  #next {
-    border-radius: 10px;
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-left: none;
-    border-top: 1px solid var(--code-color);
-  }
+	#next {
+		border-top: 1px solid var(--code-color);
+		border-left: none;
+		border-radius: 10px;
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
 
-  pre {
-    width: 300px;
-    overflow-x: auto;
-  }
+	pre {
+		overflow-x: auto;
+		width: 300px;
+	}
 }
