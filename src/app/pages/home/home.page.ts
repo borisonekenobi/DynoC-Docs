@@ -1,39 +1,39 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {ForComponent} from '../../components/code/keyword/for/for.component';
 import {IntComponent} from '../../components/code/keyword/int/int.component';
 import {NumberComponent} from '../../components/code/number/number.component';
 import {
-  PrintLineComponent
+	PrintLineComponent,
 } from '../../components/code/function/print-line/print-line.component';
 import {StringComponent} from '../../components/code/string/string.component';
 import {
-  CommentComponent
+	CommentComponent,
 } from '../../components/code/comment/comment.component';
 import {VarComponent} from '../../components/code/keyword/var/var.component';
 import {IfComponent} from '../../components/code/keyword/if/if.component';
 import {ElseComponent} from '../../components/code/keyword/else/else.component';
 import {
-  FunctionComponent
+	FunctionComponent,
 } from '../../components/code/function/function.component';
 import {
-  ReturnComponent
+	ReturnComponent,
 } from '../../components/code/keyword/return/return.component';
 import {
-  FloatComponent
+	FloatComponent,
 } from '../../components/code/keyword/float/float.component';
 import {
-  PrintComponent
+	PrintComponent,
 } from '../../components/code/function/print/print.component';
 import {
-  StringKWComponent
+	StringKWComponent,
 } from '../../components/code/keyword/string/string.component';
 import {
-  InputComponent
+	InputComponent,
 } from '../../components/code/function/input/input.component';
 import {VoidComponent} from '../../components/code/keyword/void/void.component';
 import {
-  WhileComponent
+	WhileComponent,
 } from '../../components/code/keyword/while/while.component';
 
 @Component({
@@ -56,7 +56,10 @@ import {
     InputComponent,
     VoidComponent,
     WhileComponent,
-  ], templateUrl: './home.page.html', styleUrl: './home.page.css',
+  ],
+  templateUrl: './home.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  styleUrl: './home.page.css',
 })
 export class HomePage {
   timer: number = 0;

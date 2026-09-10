@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {FunctionComponent} from '../function.component';
 
 @Component({
@@ -6,6 +6,7 @@ import {FunctionComponent} from '../function.component';
   imports: [
     FunctionComponent],
   templateUrl: './print-error.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './print-error.component.css',
 })
 export class PrintErrorComponent {
