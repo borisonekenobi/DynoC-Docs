@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {
-  InputComponent
+	InputComponent,
 } from '../../../../components/code/function/input/input.component';
 import {RouterLink} from '@angular/router';
 
@@ -11,6 +11,7 @@ import {RouterLink} from '@angular/router';
     RouterLink,
   ],
   templateUrl: './input.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './input.page.css',
 })
 export class InputPage {

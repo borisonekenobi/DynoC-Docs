@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 
 @Component({
@@ -6,6 +6,7 @@ import {RouterOutlet} from '@angular/router';
   imports: [
     RouterOutlet],
   templateUrl: './documentation.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './documentation.page.css',
 })
 export class DocumentationPage {

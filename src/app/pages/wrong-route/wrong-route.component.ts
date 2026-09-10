@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {RouterLink} from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import {RouterLink} from '@angular/router';
     RouterLink,
   ],
   templateUrl: './wrong-route.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './wrong-route.component.css'
 })
 export class WrongRouteComponent {

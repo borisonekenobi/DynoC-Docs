@@ -1,62 +1,62 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {
-  NumberComponent,
+	NumberComponent,
 } from '../../../../components/code/number/number.component';
 import {
-  FunctionComponent,
+	FunctionComponent,
 } from '../../../../components/code/function/function.component';
 import {
-  StringComponent,
+	StringComponent,
 } from '../../../../components/code/string/string.component';
 import {
-  CommentComponent,
+	CommentComponent,
 } from '../../../../components/code/comment/comment.component';
 import {CharComponent} from '../../../../components/code/char/char.component';
 import {
-  DCDocCommentComponent,
+	DCDocCommentComponent,
 } from '../../../../components/code/dcdoc-comment/dcdoc-comment.component';
 import {
-  IntComponent
+	IntComponent,
 } from '../../../../components/code/keyword/int/int.component';
 import {
-  FloatComponent
+	FloatComponent,
 } from '../../../../components/code/keyword/float/float.component';
 import {IfComponent} from '../../../../components/code/keyword/if/if.component';
 import {
-  ElseComponent
+	ElseComponent,
 } from '../../../../components/code/keyword/else/else.component';
 import {
-  VarComponent
+	VarComponent,
 } from '../../../../components/code/keyword/var/var.component';
 import {
-  StringKWComponent
+	StringKWComponent,
 } from '../../../../components/code/keyword/string/string.component';
 import {
-  ReturnComponent
+	ReturnComponent,
 } from '../../../../components/code/keyword/return/return.component';
 import {
-  CharKWComponent
+	CharKWComponent,
 } from '../../../../components/code/keyword/char/char-kw.component';
 import {
-  VoidComponent
+	VoidComponent,
 } from '../../../../components/code/keyword/void/void.component';
 import {
-  ForComponent
+	ForComponent,
 } from '../../../../components/code/keyword/for/for.component';
 import {
-  WhileComponent
+	WhileComponent,
 } from '../../../../components/code/keyword/while/while.component';
 import {
-  PrintLineComponent
+	PrintLineComponent,
 } from '../../../../components/code/function/print-line/print-line.component';
 import {
-  PrintComponent
+	PrintComponent,
 } from '../../../../components/code/function/print/print.component';
 import {
-  PrintErrorComponent
+	PrintErrorComponent,
 } from '../../../../components/code/function/print-error/print-error.component';
 import {
-  InputComponent
+	InputComponent,
 } from '../../../../components/code/function/input/input.component';
 import {RouterLink} from '@angular/router';
 
@@ -90,6 +90,7 @@ import {RouterLink} from '@angular/router';
     RouterLink,
   ],
   templateUrl: './syntax.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './syntax.page.css',
 })
 export class SyntaxPage {

@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {
-  PrintErrorComponent
+	PrintErrorComponent,
 } from '../../../../components/code/function/print-error/print-error.component';
 import {RouterLink} from '@angular/router';
 
@@ -11,6 +11,7 @@ import {RouterLink} from '@angular/router';
     RouterLink,
   ],
   templateUrl: './print-error.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './print-error.page.css',
 })
 export class PrintErrorPage {

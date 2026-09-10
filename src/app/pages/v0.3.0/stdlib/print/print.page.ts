@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {
-  PrintComponent
+	PrintComponent,
 } from '../../../../components/code/function/print/print.component';
 import {RouterLink} from '@angular/router';
 
@@ -11,6 +11,7 @@ import {RouterLink} from '@angular/router';
     RouterLink,
   ],
   templateUrl: './print.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './print.page.css',
 })
 export class PrintPage {

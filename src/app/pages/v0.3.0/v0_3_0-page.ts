@@ -1,14 +1,16 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Version} from '../version';
 import {SidebarComponent} from '../../components/sidebar/sidebar.component';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {
-  SidebarElement, SidebarLink, SidebarRedirect,
+	SidebarElement,
+	SidebarLink,
+	SidebarRedirect,
 } from '../../../sidebar-element';
 import {SyntaxPage} from './language-guide/syntax/syntax.page';
 import {TypesPage} from './language-guide/types/types.page';
 import {
-  VariablesAndScopePage,
+	VariablesAndScopePage,
 } from './language-guide/variables-and-scope/variables-and-scope.page';
 import {FunctionsPage} from './language-guide/functions/functions.page';
 import {ControlFlowPage} from './language-guide/control-flow/control-flow.page';
@@ -24,6 +26,7 @@ import {InputPage} from './stdlib/input/input.page';
   selector: 'app-v0.3.0.page',
   imports: [SidebarComponent, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: '../version.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: '../version.page.css',
 })
 export class V0_3_0Page extends Version {

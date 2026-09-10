@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {Router, RouterLink, RouterLinkActive} from '@angular/router';
 import {SidebarElement} from '../../../sidebar-element';
 
@@ -7,6 +7,7 @@ import {SidebarElement} from '../../../sidebar-element';
   imports: [
     RouterLink, RouterLinkActive],
   templateUrl: './sidebar.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {

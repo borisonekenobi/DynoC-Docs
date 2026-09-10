@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
@@ -7,6 +7,7 @@ import {KeywordComponent} from '../keyword.component';
     KeywordComponent,
   ],
   templateUrl: './for.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './for.component.css'
 })
 export class ForComponent {

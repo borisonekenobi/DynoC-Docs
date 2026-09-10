@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {KeywordComponent} from '../keyword.component';
 
 @Component({
@@ -6,6 +6,7 @@ import {KeywordComponent} from '../keyword.component';
   imports: [
     KeywordComponent],
   templateUrl: './break.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './break.component.css',
 })
 export class BreakComponent {

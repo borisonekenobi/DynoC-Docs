@@ -1,9 +1,10 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {ReleaseService} from '../../services/release-service';
 import {Release} from '../../models/release';
 import {parseAsset, ParsedAsset} from '../../models/parsed-asset';
 import {
-  DevicePlatform, parseDevicePlatform,
+	DevicePlatform,
+	parseDevicePlatform,
 } from '../../models/device-platform';
 import {OperatingSystem} from '../../models/operating-system';
 
@@ -11,6 +12,7 @@ import {OperatingSystem} from '../../models/operating-system';
   selector: 'app-downloads',
   imports: [],
   templateUrl: './downloads.page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './downloads.page.css',
 })
 export class DownloadsPage {
