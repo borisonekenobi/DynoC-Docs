@@ -12,6 +12,11 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "America/Toronto"
+    groups:
+      angular:
+        patterns:
+          - "@angular*"
+          - "@angular-devkit*"
     versioning-strategy: increase
   - package-ecosystem: "github-actions"
     directory: "/"
